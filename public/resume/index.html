@@ -8,8 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         @font-face {
+            font-family: 'Courier Prime Code';
+            src: url('/fonts/courier_prime_code.ttf');
+        }
+
+        @font-face {
             font-family: 'Courier Prime Sans';
             src: url('/fonts/courier_prime_sans.ttf');
+        }
+
+        @font-face {
+            font-family: 'heading typeface';
+            src: url('/fonts/MPLUSRounded1c-Regular.ttf');
         }
 
         html, body {
@@ -22,7 +32,7 @@
             padding: 0;
             background-color: var(--barely-grey);
             font-size: 16px;
-            font-family: 'Courier Prime Sans', sans-serif;
+            font-family:  Verdana, Geneva, sans-serif;
         }
         h1, h2, h3, h4, h5, h6, address, p {
             margin-top: 0;
@@ -30,6 +40,7 @@
         }
         h1, h2, h3, h4, h5, h6 {
             font-weight: normal;
+            font-family: 'heading typeface', sans-serif;
         }
         ul {
             padding-left: 1.25rem;
@@ -74,7 +85,7 @@
         }
         .personal-information__title {
             font-size: 1.15rem;
-            font-style: italic;
+            /* font-style: italic; */
         }
         .personal-information__contact-info-link {
             display: block;
@@ -103,7 +114,8 @@
         .content-section__topic-heading {
             margin-left: -.5rem;
             font-size: 1rem;
-            font-style: italic;
+            font-family: 'heading typeface';
+            /* font-style: italic; */
         }
         .text-grey {
             color: var(--dark-grey);
@@ -151,7 +163,7 @@
                 </address>
             </header>
             <section id="skills" class="content-section">
-                <h3 class="content-section__section-heading">Skills</h3>
+                <h2 class="content-section__section-heading">Skills</h2>
                 <div class="content-section__content">
                     <p class="content-section__topic">
                         <span class="content-section__topic-heading">Front end:</span>
@@ -166,7 +178,7 @@
                 </div>
             </section>
             <section id="experience" class="content-section">
-                <h3 class="content-section__section-heading">Experience</h3>
+                <h2 class="content-section__section-heading">Experience</h2>
                 <div class="content-section__content">
                     <p class="content-section__topic">
                         <span class="content-section__topic-heading">VTA-BART</span>
@@ -183,7 +195,7 @@
                 </div>
             </section>
             <section id="projects" class="content-section">
-                <h3 class="content-section__section-heading">Projects</h3>
+                <h2 class="content-section__section-heading">Projects</h2>
                 <div class="content-section__content">
                     <p class="content-section__topic">
                         <span class="content-section__topic-heading">svbx.org​</span>
@@ -216,7 +228,7 @@
                 </div>
             </section>
             <section id="education" class="content-section">
-                <h3 class="content-section__section-heading">Education</h3>
+                <h2 class="content-section__section-heading">Education</h2>
                 <div class="content-section__content">
                     <p class="content-section__topic">
                         <span class="content-section__topic-heading">BFA, Pictorial Art</span>
