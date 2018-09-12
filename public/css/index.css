@@ -2,6 +2,11 @@
 /* @import './desktop.css'; */
 /* @import './mobile.css'; */
 
+@font-face {
+  font-family: 'Courier Prime Sans';
+  src: url('/fonts/courier_prime_sans.ttf');
+}
+
 html {
   --purple: #93e;
   --green: lightSeaGreen;
@@ -17,7 +22,7 @@ html {
 }
 
 body {
-  font-family: Courier, serif;
+  font-family: 'Courier Prime Sans', sans-serif;
   hyphens: manual;
   color: #404040;
 }
