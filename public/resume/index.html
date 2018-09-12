@@ -8,17 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         @font-face {
-            font-family: 'Courier Prime Code';
-            src: url('/fonts/courier_prime_code.ttf');
-        }
-
-        @font-face {
-            font-family: 'Courier Prime Sans';
-            src: url('/fonts/courier_prime_sans.ttf');
-        }
-
-        @font-face {
-            font-family: 'heading typeface';
+            font-family: 'M PLUS Rounded 1c';
             src: url('/fonts/MPLUSRounded1c-Regular.ttf');
         }
 
@@ -28,11 +18,12 @@
             --mid-grey: #999;
             --lt-grey: #ccc;
             --barely-grey: #f6f6f6;
+            --heading-font: 'M PLUS Rounded 1c', Verdana, Geneva, sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--barely-grey);
             font-size: 16px;
-            font-family:  Verdana, Geneva, sans-serif;
+            font-family: Verdana, Geneva, sans-serif;
         }
         h1, h2, h3, h4, h5, h6, address, p {
             margin-top: 0;
@@ -40,7 +31,7 @@
         }
         h1, h2, h3, h4, h5, h6 {
             font-weight: normal;
-            font-family: 'heading typeface', sans-serif;
+            font-family: var(--heading-font);
         }
         ul {
             padding-left: 1.25rem;
@@ -97,10 +88,11 @@
             padding-top: .5rem; padding-bottom: .65rem;
             padding-left: 20px; padding-right: .65rem;
             background-color: var(--lt-grey);
-            background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="50" width="15"><polygon points="0 0, 15 0, 0 50" fill="white" /></svg>');
+            /* background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="50" width="15"><polygon points="0 0, 15 0, 0 50" fill="white" /></svg>'); */
+            background-image: linear-gradient(-70deg, var(--lt-grey) 0%, var(--lt-grey) 50%, white 50%, white 100%);
             background-origin: border-box;
-            background-position: -2px -10px;
-            background-size: 20px 60px;
+            background-position: 0 0;
+            background-size: 20px 102%;
             background-repeat: no-repeat;
             text-align: left;
             color: var(--near-black);
@@ -114,7 +106,7 @@
         .content-section__topic-heading {
             margin-left: -.5rem;
             font-size: 1rem;
-            font-family: 'heading typeface';
+            font-family: var(--heading-font);
             /* font-style: italic; */
         }
         .text-grey {
