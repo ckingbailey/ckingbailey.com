@@ -7,17 +7,24 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        @font-face {
+            font-family: 'M PLUS Rounded 1c';
+            src: url('/fonts/MPLUSRounded1c-Regular.ttf');
+        }
+
         html, body {
             --near-black: #333;
             --dark-grey: #6f6f6f;
             --mid-grey: #999;
             --lt-grey: #ccc;
             --barely-grey: #f6f6f6;
+            --base-font: Verdana, Geneva, sans-serif;
+            --heading-font: 'M PLUS Rounded 1c', var(--base-font);
             margin: 0;
             padding: 0;
             background-color: var(--barely-grey);
             font-size: 16px;
-            font-family: Verdana, Geneva, sans-serif;
+            font-family: var(--base-font);
         }
         h1, h2, h3, h4, h5, h6, address, p {
             margin-top: 0;
@@ -25,8 +32,10 @@
         }
         h1, h2, h3, h4, h5, h6 {
             font-weight: normal;
+            font-family: var(--heading-font);
         }
         ul {
+            margin-top: 0;
             padding-left: 1.25rem;
             list-style-type: none;
         }
@@ -69,7 +78,6 @@
         }
         .personal-information__title {
             font-size: 1.15rem;
-            font-style: italic;
         }
         .personal-information__contact-info-link {
             display: block;
@@ -81,16 +89,21 @@
             padding-top: .5rem; padding-bottom: .65rem;
             padding-left: 20px; padding-right: .65rem;
             background-color: var(--lt-grey);
-            background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="50" width="15"><polygon points="0 0, 15 0, 0 50" fill="white" /></svg>');
+            /* background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="50" width="15"><polygon points="0 0, 15 0, 0 50" fill="white" /></svg>'); */
+            background-image: linear-gradient(-75deg, var(--lt-grey) 0%, var(--lt-grey) 50%, white 50%, white 100%);
             background-origin: border-box;
-            background-position: -2px -10px;
-            background-size: 20px 60px;
+            background-position: 0 0;
+            background-size: 20px 102%;
             background-repeat: no-repeat;
             text-align: left;
+            line-height: 1.2;
             color: var(--near-black);
         }
         .content-section__content, .content-section__sub-title, .personal-information__contact-info {
             font-size: .85rem;
+        }
+        .content-section__sub-title {
+            font-family: var(--base-font);
         }
         .content-section__topic {
             padding-left: .5rem;
@@ -98,7 +111,8 @@
         .content-section__topic-heading {
             margin-left: -.5rem;
             font-size: 1rem;
-            font-style: italic;
+            font-family: var(--heading-font);
+            /* font-style: italic; */
         }
         .text-grey {
             color: var(--dark-grey);
@@ -185,7 +199,7 @@
                         &bull; PHP, MySQL, Bootstrap, D3
                     </p>
                     <div class="content-section__content">
-                        <h5 class="content-section__sub-title">Construction mgmt app</h5>
+                        <h5 class="content-section__sub-title">Construction management app</h5>
                         <p>Refactor PHP backend and add interactable Javascript frontend</p>
                     </div>
                 </div>
