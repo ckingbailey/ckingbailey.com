@@ -8,9 +8,14 @@
 }
 
 html {
+  --thimble-blue: #2266a7;
+  --thimble-orange: #f15a3b;
   --purple: #93e;
   --green: lightSeaGreen;
   --yellow: #e5bb14;
+  --near-black: #404040;
+  --near-white: #eee;
+  --text-color: var(--near-black);
   --base-font: Verdana, Geneva, sans-serif;
   --heading-font: 'M PLUS Rounded 1c', var(--base-font);
   --gap: 1.5rem;
@@ -26,7 +31,7 @@ html {
 body {
   font-family: var(--base-font);
   hyphens: manual;
-  color: #404040;
+  color: var(--text-color);
 }
 /* override thimble styles */
 p {
@@ -37,6 +42,7 @@ p {
 }
 /* layout stuff */
 .container {
+  position: relative;
   margin: var(--gap) auto 0;
 }
 .section {
@@ -56,7 +62,7 @@ p {
 }
 .backdrop {
   border-radius: 1px;
-  background-color: #eee;
+  background-color: var(--near-white);
 }
 .panel-heading {
   margin-top: calc(-.7 * var(--pad));
@@ -64,7 +70,7 @@ p {
   font-family: var(--heading-font);
   font-size: 2.2rem;
 }
-.x {
+/* .x {
   background-image:
     linear-gradient(
       to top right, transparent calc(50% - 1px), #999 calc(50% - 1px),
@@ -74,7 +80,7 @@ p {
       to bottom right, transparent calc(50% - 1px), #999 calc(50% - 1px),
       #999 calc(50% + 1px), transparent calc(50% + 1px)
       );
-}
+} */
 
 /* utility classes */
 .height-100 {
@@ -130,24 +136,44 @@ p {
             border: 1px solid #d0d0d0;
             transition: background-color .05s linear;
           }
-  .project-display {
-    padding-top: var(--pad); padding-bottom: var(--pad);
-    padding-left: calc(var(--pad) / var(--less-multiplier)); padding-right: calc(var(--pad) / var(--less-multiplier));
-    line-height: var(--less-line-ht);
-  }
-  .project-display.empty-display {
-    width: 0;
-    height: 0;
-  }
-  .project-display :nth-child(n-1) {
-    margin-bottom: .75rem;
-  }
+.project-display {
+  padding-top: var(--pad); padding-bottom: var(--pad);
+  padding-left: calc(var(--pad) / var(--less-multiplier)); padding-right: calc(var(--pad) / var(--less-multiplier));
+  line-height: var(--less-line-ht);
+}
+.project-display.empty-display {
+  width: 0;
+  height: 0;
+}
+.project-display :nth-child(n-1) {
+  margin-bottom: .75rem;
+}
   .project-heading {
       margin-bottom: calc(var(--pad) / var(--less-multiplier));
       font-size: 1.65rem;
       line-height: 1.2;
       font-family: var(--heading-font);
     }
+
+.resume-link {
+  position: absolute;
+  bottom: 1rem;
+  right: -12.75rem;
+}
+
+.resume-link>a::after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px; height: 18px;
+  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="18" width="18"><polygon points="4 3, 11 9, 4 15" fill="#2266a7"/></svg>');
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.resume-link>a:hover::after {
+  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="18" width="18"><polygon points="4 3, 11 9, 4 15" fill="#f15a3b"/></svg>');
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 @media only screen and (min-width: 64.0625rem) {
   .container {
