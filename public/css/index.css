@@ -3,14 +3,16 @@
 /* @import './mobile.css'; */
 
 @font-face {
-  font-family: 'Courier Prime Sans';
-  src: url('/fonts/courier_prime_sans.ttf');
+  font-family: 'M PLUS Rounded 1c';
+  src: url('/fonts/MPLUSRounded1c-Regular.ttf');
 }
 
 html {
   --purple: #93e;
   --green: lightSeaGreen;
   --yellow: #e5bb14;
+  --base-font: Verdana, Geneva, sans-serif;
+  --heading-font: 'M PLUS Rounded 1c', var(--base-font);
   --gap: 1.5rem;
   --pad: 1rem;
   --pad-text: calc(.75 * var(--pad)) var(--pad) calc(.825 * var(--pad));
@@ -22,7 +24,7 @@ html {
 }
 
 body {
-  font-family: 'Courier Prime Sans', sans-serif;
+  font-family: var(--base-font);
   hyphens: manual;
   color: #404040;
 }
@@ -52,6 +54,9 @@ p {
 .callout {
   padding: var(--pad-text-less);
 }
+address {
+  font-family: var(--heading-font);
+}
 .backdrop {
   border-radius: 1px;
   background-color: #eee;
@@ -59,6 +64,7 @@ p {
 .panel-heading {
   margin-top: calc(-.7 * var(--pad));
   margin-bottom: calc(.25 * var(--pad));
+  font-family: var(--heading-font);
   font-size: 2.2rem;
 }
 .x {
