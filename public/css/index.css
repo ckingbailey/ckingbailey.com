@@ -1,6 +1,4 @@
 @import './thimble.css';
-/* @import './desktop.css'; */
-/* @import './mobile.css'; */
 
 @font-face {
   font-family: 'M PLUS Rounded 1c';
@@ -68,19 +66,8 @@ p {
   margin-top: calc(-.7 * var(--pad));
   margin-bottom: calc(.25 * var(--pad));
   font-family: var(--heading-font);
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
-/* .x {
-  background-image:
-    linear-gradient(
-      to top right, transparent calc(50% - 1px), #999 calc(50% - 1px),
-      #999 calc(50% + 1px), transparent calc(50% + 1px)
-      ),
-    linear-gradient(
-      to bottom right, transparent calc(50% - 1px), #999 calc(50% - 1px),
-      #999 calc(50% + 1px), transparent calc(50% + 1px)
-      );
-} */
 
 /* utility classes */
 .height-100 {
@@ -92,6 +79,13 @@ p {
     border-radius: 2px;
     font-style: italic;
     font-family: var(--heading-font);
+  }
+  .contact-info ul {
+    margin: 0;
+    padding: 0;
+  }
+  .contact-info li {
+    list-style-type: none;
   }
   .about-panel {
     display: flex;

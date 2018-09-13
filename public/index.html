@@ -13,11 +13,14 @@
       <header class="row info">
         <div class="cell section four">
           <aside class="row panel border height-100">
-            <h2 class="cell panel-heading">Contact</h2>
-            <address class="cell callout contact-info backdrop">Colin King-Bailey<br
-              ><a href="https://github.com/ckingbailey">github.com/ckingbailey</a><br
-              ><a href="https://www.linkedin.com/in/ckingbailey/">linkedin.com/in/ckingbailey</a><br
-              >ckingbailey<i class="email-punctuation">@</i>gmail<i class="email-punctuation">.</i>com</address>
+            <h2 class="cell panel-heading">Colin King-Bailey</h2>
+            <address class="cell callout contact-info backdrop">
+              <ul>
+                <li><a href="https://github.com/ckingbailey">github.com/ckingbailey</a></li>
+                <li><a href="https://www.linkedin.com/in/ckingbailey/">linkedin.com/in/ckingbailey</a></li>
+                <li><a href="mailto:ckingbailey@gmail.com">ckingbailey<i class="email-punctuation">@</i>gmail<i class="email-punctuation">.</i>com</a></li>
+              </ul>
+            </address>
           </aside>
         </div>
         <div class="cell section eight">
@@ -39,7 +42,17 @@
               <div class="slide-track">
                 <ul class="projects-list">
                   <li class="projects-li">
-                    <a
+                      <a
+                      data-targetfor="turtrello"
+                      class="project-btn backdrop"
+                      role="button"
+                      onclick="return onProjectBtnClick(event)"
+                    >
+                      <img class="project-thumb" src="img/turtrello_thumb.png">
+                    </a>
+                  </li>
+                  <li class="projects-li">
+                      <a
                       data-targetfor="svbx"
                       class="project-btn backdrop"
                       role="button"
@@ -49,23 +62,13 @@
                     </a>
                   </li>
                   <li class="projects-li">
-                    <a
+                      <a
                       data-targetfor="bisbeevacationrental"
                       class="project-btn backdrop"
                       role="button"
                       onclick="return onProjectBtnClick(event)"
                     >
                       <img class="project-thumb" src="img/bisbeevacationrental_thumb.png">
-                    </a>
-                  </li>
-                  <li class="projects-li">
-                    <a
-                      data-targetfor="turtrello"
-                      class="project-btn backdrop"
-                      role="button"
-                      onclick="return onProjectBtnClick(event)"
-                    >
-                      <img class="project-thumb" src="img/turtrello_thumb.png">
                     </a>
                   </li>
                 </ul>

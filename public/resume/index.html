@@ -13,6 +13,11 @@
         }
 
         html, body {
+            --purple: #93e;
+            --thimble-blue: #2266a7;
+            --dark-blue: #0c4099;
+            /* --lt-blue: #69d; */
+            --thimble-orange: #f15a3b;
             --near-black: #333;
             --dark-grey: #6f6f6f;
             --mid-grey: #999;
@@ -25,6 +30,7 @@
             background-color: var(--barely-grey);
             font-size: 16px;
             font-family: var(--base-font);
+            color: var(--near-black);
         }
         h1, h2, h3, h4, h5, h6, address, p {
             margin-top: 0;
@@ -45,21 +51,31 @@
             margin-left: calc(-1 * (6px + .45rem));
             margin-right: .45rem;
             width: 6px; height: 10px;
-            background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="6" height="10"><polygon points="0 2, 6 5, 0 8" fill="%23333" /></svg>');
+            background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="6" height="10"><polygon points="0 2, 6 5, 0 8" fill="%23333"/></svg>');
             background-repeat: no-repeat;
         }
         a {
             text-decoration: none;
-            color: #249;
+            /* color: #249; */
+            color: var(--thimble-blue);
+            border-color: var(--thimble-blue);
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
         a:visited {
-            color: #249;
+            color: var(--dark-blue);
         }
         a:hover {
-            color: #69d;
+            color: var(--thimble-orange);
         }
+        /* a:hover {
+            color: #69d;
+        } */
         address {
             font-style: normal;
+        }
+        ::selection {
+            background-color: var(--purple);
+            color: white;
         }
         .main-content {
             margin: 0 auto;
@@ -140,7 +156,7 @@
                 margin-left: .25rem;
                 width: 10px;
                 height: 10px;
-                background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="10" height="10"><polygon points="3 3, 7 3, 7 7, 3 7" fill="none" stroke-width="1" stroke="#333" /></svg>');
+                background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="10" height="10"><polygon points="3 3, 7 3, 7 7, 3 7" fill="none" stroke-width="1" stroke="%23333" /></svg>');
             }
         }
     </style>
@@ -160,7 +176,7 @@
                 </address>
             </header>
             <section id="skills" class="content-section">
-                <h2 class="content-section__section-heading">Skills</h2>
+                <h3 class="content-section__section-heading">Skills</h3>
                 <div class="content-section__content">
                     <p class="content-section__topic">
                         <span class="content-section__topic-heading">Front end:</span>
@@ -175,7 +191,7 @@
                 </div>
             </section>
             <section id="experience" class="content-section">
-                <h2 class="content-section__section-heading">Experience</h2>
+                <h3 class="content-section__section-heading">Experience</h3>
                 <div class="content-section__content">
                     <p class="content-section__topic">
                         <span class="content-section__topic-heading">VTA-BART</span>
@@ -192,7 +208,7 @@
                 </div>
             </section>
             <section id="projects" class="content-section">
-                <h2 class="content-section__section-heading">Projects</h2>
+                <h3 class="content-section__section-heading">Projects</h3>
                 <div class="content-section__content">
                     <p class="content-section__topic">
                         <span class="content-section__topic-heading">svbx.org​</span>
@@ -225,7 +241,7 @@
                 </div>
             </section>
             <section id="education" class="content-section">
-                <h2 class="content-section__section-heading">Education</h2>
+                <h3 class="content-section__section-heading">Education</h3>
                 <div class="content-section__content">
                     <p class="content-section__topic">
                         <span class="content-section__topic-heading">BFA, Pictorial Art</span>
