@@ -18,12 +18,13 @@
             --mid-grey: #999;
             --lt-grey: #ccc;
             --barely-grey: #f6f6f6;
-            --heading-font: 'M PLUS Rounded 1c', Verdana, Geneva, sans-serif;
+            --content-font: Verdana, Geneva, sans-serif;
+            --heading-font: 'M PLUS Rounded 1c', var(--content-font);
             margin: 0;
             padding: 0;
             background-color: var(--barely-grey);
             font-size: 16px;
-            font-family: Verdana, Geneva, sans-serif;
+            font-family: var(--content-font);
         }
         h1, h2, h3, h4, h5, h6, address, p {
             margin-top: 0;
@@ -34,6 +35,7 @@
             font-family: var(--heading-font);
         }
         ul {
+            margin-top: 0;
             padding-left: 1.25rem;
             list-style-type: none;
         }
@@ -76,7 +78,6 @@
         }
         .personal-information__title {
             font-size: 1.15rem;
-            /* font-style: italic; */
         }
         .personal-information__contact-info-link {
             display: block;
@@ -89,16 +90,20 @@
             padding-left: 20px; padding-right: .65rem;
             background-color: var(--lt-grey);
             /* background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="50" width="15"><polygon points="0 0, 15 0, 0 50" fill="white" /></svg>'); */
-            background-image: linear-gradient(-70deg, var(--lt-grey) 0%, var(--lt-grey) 50%, white 50%, white 100%);
+            background-image: linear-gradient(-75deg, var(--lt-grey) 0%, var(--lt-grey) 50%, white 50%, white 100%);
             background-origin: border-box;
-            background-position: -2px 0;
+            background-position: 0 0;
             background-size: 20px 102%;
             background-repeat: no-repeat;
             text-align: left;
+            line-height: 1.2;
             color: var(--near-black);
         }
         .content-section__content, .content-section__sub-title, .personal-information__contact-info {
             font-size: .85rem;
+        }
+        .content-section__sub-title {
+            font-family: var(--content-font);
         }
         .content-section__topic {
             padding-left: .5rem;
@@ -155,7 +160,7 @@
                 </address>
             </header>
             <section id="skills" class="content-section">
-                <h2 class="content-section__section-heading">Skills</h2>
+                <h3 class="content-section__section-heading">Skills</h3>
                 <div class="content-section__content">
                     <p class="content-section__topic">
                         <span class="content-section__topic-heading">Front end:</span>
@@ -170,7 +175,7 @@
                 </div>
             </section>
             <section id="experience" class="content-section">
-                <h2 class="content-section__section-heading">Experience</h2>
+                <h3 class="content-section__section-heading">Experience</h3>
                 <div class="content-section__content">
                     <p class="content-section__topic">
                         <span class="content-section__topic-heading">VTA-BART</span>
@@ -187,14 +192,14 @@
                 </div>
             </section>
             <section id="projects" class="content-section">
-                <h2 class="content-section__section-heading">Projects</h2>
+                <h3 class="content-section__section-heading">Projects</h3>
                 <div class="content-section__content">
                     <p class="content-section__topic">
                         <span class="content-section__topic-heading">svbx.org​</span>
                         &bull; PHP, MySQL, Bootstrap, D3
                     </p>
                     <div class="content-section__content">
-                        <h5 class="content-section__sub-title">Construction mgmt app</h5>
+                        <h5 class="content-section__sub-title">Construction management app</h5>
                         <p>Refactor PHP backend and add interactable Javascript frontend</p>
                     </div>
                 </div>
@@ -220,7 +225,7 @@
                 </div>
             </section>
             <section id="education" class="content-section">
-                <h2 class="content-section__section-heading">Education</h2>
+                <h3 class="content-section__section-heading">Education</h3>
                 <div class="content-section__content">
                     <p class="content-section__topic">
                         <span class="content-section__topic-heading">BFA, Pictorial Art</span>
