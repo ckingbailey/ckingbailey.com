@@ -54,9 +54,6 @@ p {
 .callout {
   padding: var(--pad-text-less);
 }
-address {
-  font-family: var(--heading-font);
-}
 .backdrop {
   border-radius: 1px;
   background-color: #eee;
@@ -88,6 +85,7 @@ address {
   .contact-info {
     border-radius: 2px;
     font-style: italic;
+    font-family: var(--heading-font);
   }
   .about-panel {
     display: flex;
@@ -148,6 +146,7 @@ address {
       margin-bottom: calc(var(--pad) / var(--less-multiplier));
       font-size: 1.65rem;
       line-height: 1.2;
+      font-family: var(--heading-font);
     }
 
 @media only screen and (min-width: 64.0625rem) {
