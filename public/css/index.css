@@ -43,7 +43,7 @@ p {
 /* layout stuff */
 .container {
   position: relative;
-  margin: var(--gap) auto 0;
+  margin: 0 auto 0;
 }
 .section {
   margin-bottom: var(--gap);
@@ -156,22 +156,24 @@ p {
     }
 
 .resume-link {
-  position: absolute;
-  bottom: 1rem;
-  right: -12.75rem;
+  margin-top: .25rem;
+  margin-bottom: .35rem;
+  text-align: right;
+  font-size: 1rem;
+  line-height: normal;
 }
 
 .resume-link>a::after {
   content: '';
   display: inline-block;
-  vertical-align: middle;
-  width: 18px; height: 18px;
-  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="18" width="18"><polygon points="4 3, 11 9, 4 15" fill="#2266a7"/></svg>');
+  vertical-align: text-bottom;
+  width: 12px; height: 18px;
+  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="18" width="12"><polygon points="4 3, 11 9, 4 15" fill="%232266a7"/></svg>');
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .resume-link>a:hover::after {
-  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="18" width="18"><polygon points="4 3, 11 9, 4 15" fill="#f15a3b"/></svg>');
+  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="18" width="12"><polygon points="4 3, 11 9, 4 15" fill="%23f15a3b"/></svg>');
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
