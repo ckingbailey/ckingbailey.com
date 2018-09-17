@@ -180,7 +180,13 @@ p {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media only screen and (min-width: 64.0625rem) {
+@media only screen and (max-width: 40rem) {
+  .panel-heading {
+    font-size: 8.75vw;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
   .container {
     max-width: 64rem;
   }
