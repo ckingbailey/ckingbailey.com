@@ -3,26 +3,21 @@ const onProjectBtnClick = (function() {
   const heading = pd.children.projectHeading;
   const img = pd.children.projectView;
   const description = pd.children.projectDescription;
+  const contribution = pd.children.projectContribution;
   const stack = pd.children.projectTech;
   const link = pd.children.projectLink;
   const projectInfo = {
-    svbx: {
-      "name": "svbx.org",
-      "description": "Database and web interface for tracking commissioning of Silicon Valley BART Extension",
-      "stack": ["PHP", "MySQL", "JavaScript DOM APIs", "D3.js"],
-      "link": "https://svbx.org"
-    },
     bisbeevacationrental: {
       name: "Bisbee Vacation Rental",
       description: "Marketing page for a mountain cottage in Bisbee, AZ",
       stack: ["HTML", "CSS", "jQuery"],
       link: "http://bisbeevacationrental.com"
     },
-    turtrello: {
-      name: "Turtrello",
-      description: "Trello clone",
-      stack: ["React", "Firebase"],
-      link: "http://ckingbailey.github.io"
+    chinguprojectshowcase: {
+      name: "Chingu Project Showcase",
+      description: "See and edit data for projects completed by Chingu Build-To-Learn remote teams",
+      stack: ["React", "Node", "Express", "MongoDB", "Mongoose"],
+      link: "http://geckos-05-winter17.herokuapp.com"
     },
     localweatherapp: {
       name: "Local Weather App",
@@ -30,11 +25,24 @@ const onProjectBtnClick = (function() {
       stack: ["jQuery", "CSS"],
       link: "http://ckingbailey.com/weather"
     },
-    chinguprojectshowcase: {
-      name: "Chingu Project Showcase",
-      description: "See and edit data for projects completed by Chingu Build-To-Learn remote teams",
-      stack: ["React", "Node", "Express", "MongoDB", "Mongoose"],
-      link: "http://geckos-05-winter17.herokuapp.com"
+    opendisclosure: {
+      name: "Open Disclosure",
+      description: "Track campaign finance in Oakland, San Francisco, and Berkeley elections",
+      contribution: "Implemented visual design update, contributed interactive React components, removed vestigial backend endpoints",
+      stack: ["Ruby", "Jekyll", "React"],
+      link: "https://www.opendisclosure.io/"
+    },
+    svbx: {
+      "name": "svbx.org",
+      "description": "Database and web interface for tracking commissioning of Silicon Valley BART Extension",
+      "stack": ["PHP", "MySQL", "JavaScript DOM APIs", "D3.js"],
+      "link": "https://svbx.org"
+    },
+    turtrello: {
+      name: "Turtrello",
+      description: "Trello clone",
+      stack: ["React", "Firebase"],
+      link: "http://ckingbailey.github.io"
     }
   }
 
@@ -62,6 +70,7 @@ const onProjectBtnClick = (function() {
       img.setAttribute("src", `img/${targetProject}.png`);
       img.setAttribute("data-displayfor", targetProject);
       description.innerText = projectInfo[targetProject].description;
+      contribution.innerText = projectInfo[targetProject].contribution || "";
       stack.innerText = projectInfo[targetProject].stack.join(", ");
       link.innerText = projectInfo[targetProject].link;
       link.setAttribute("href", projectInfo[targetProject].link);
@@ -75,6 +84,7 @@ const onProjectBtnClick = (function() {
       img.removeAttribute("data-displayfor");
       description.innerText = "";
       stack.innerText = "";
+      contribution.innerText = "";
       link.innerText = "";
       link.removeAttribute("href");
     }

@@ -12,6 +12,7 @@ html {
   --green: lightSeaGreen;
   --yellow: #e5bb14;
   --near-black: #404040;
+  --dark-grey: #606060;
   --near-white: #eee;
   --text-color: var(--near-black);
   --base-font: Verdana, Geneva, sans-serif;
@@ -143,11 +144,18 @@ p {
   margin-bottom: .75rem;
 }
   .project-heading {
-      margin-bottom: calc(var(--pad) / var(--less-multiplier));
-      font-size: 1.65rem;
-      line-height: 1.2;
-      font-family: var(--heading-font);
-    }
+    margin-bottom: calc(var(--pad) / var(--less-multiplier));
+    font-size: 1.65rem;
+    line-height: 1.2;
+    font-family: var(--heading-font);
+  }
+  .project-description {
+    font-style: italic;
+  }
+  .project-tech {
+    font-size: .9rem;
+    color: var(--dark-grey);
+  }
 
 .resume-link {
   margin-top: .25rem;
