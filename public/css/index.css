@@ -140,6 +140,9 @@ p {
   width: 0;
   height: 0;
 }
+.project-display.empty-display>:nth-child(n) {
+  display: none;
+}
 .project-display :nth-child(n-1) {
   margin-bottom: .75rem;
 }
