@@ -1,0 +1,26 @@
+{
+  "name": "ckingbailey.com",
+  "version": "1.0.0",
+  "description": "Colin King-Bailey's portfolio and resume site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckingbailey/ckingbailey.com.git"
+  },
+  "keywords": [
+    "ckb",
+    "web-developer"
+  ],
+  "author": "ckb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ckingbailey/ckingbailey.com/issues"
+  },
+  "homepage": "https://github.com/ckingbailey/ckingbailey.com#readme",
+  "dependencies": {
+    "metalsmith": "^2.3.0"
+  }
+}
