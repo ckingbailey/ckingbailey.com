@@ -23,6 +23,9 @@
   },
   "homepage": "https://github.com/ckingbailey/ckingbailey.com#readme",
   "dependencies": {
-    "metalsmith": "^2.3.0"
+    "jstransformer-nunjucks": "^0.5.0",
+    "metalsmith": "^2.3.0",
+    "metalsmith-layouts": "^2.2.0",
+    "metalsmith-markdown": "^1.0.1"
   }
 }
