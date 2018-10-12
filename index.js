@@ -13,8 +13,8 @@ metalsmith(__dirname)
         generatorurl: "http://metalsmith.io/"
     })
     .source('./src')
-    .destination('./build')
-    .clean(true)
+    .destination('./public')
+    .clean(false)
     .use(markdown())
     .use(layouts())
     .build(err => {

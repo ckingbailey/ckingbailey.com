@@ -1,6 +1,7 @@
 ---
 layout: index.njk
 headline: Web Developer
+hero-img: '../assets/web-header.jpg'
 ---
 I create software that helps people get things done better
 
