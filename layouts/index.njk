@@ -2,9 +2,10 @@
 <html>
     <head>
         <title>{{ title }}</title>
+        <link rel="icon" type="image/x-icon" href="{{ icon }}">
+        <link rel="stylesheet" href="{{ stylesheet }}">
     </head>
     <body>
-        <h1>{{ headline }}</h1>
-        {{ contents | safe }}
+        {% include "hero.njk" %}
     </body>
 </html>
