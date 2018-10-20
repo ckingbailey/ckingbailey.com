@@ -2,6 +2,7 @@ const metalsmith = require('metalsmith')
 const markdown = require('metalsmith-markdown')
 const layouts = require('metalsmith-layouts')
 const static = require('metalsmith-static')
+const ignore = require('metalsmith-ignore')
 
 metalsmith(__dirname)
     .metadata({
@@ -18,9 +19,10 @@ metalsmith(__dirname)
     .clean(true)
     .use(markdown())
     .use(layouts())
+    .use(ignore("**/_dev/*"))
     .use(static({
-        "src": "src",
-        "dest": "public"
+        "src": "css",
+        "dest": "."
     }))
     .build(err => {
         if (err) throw err

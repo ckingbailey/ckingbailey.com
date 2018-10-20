@@ -33,6 +33,7 @@
     "metalsmith-markdown": "^1.0.1"
   },
   "devDependencies": {
+    "metalsmith-ignore": "^1.0.0",
     "metalsmith-static": "0.0.5"
   }
 }
