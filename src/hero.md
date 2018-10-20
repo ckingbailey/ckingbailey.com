@@ -1,4 +1,4 @@
 ---
 layout: hero.njk
-hero-img: '../assets/web-header.jpg'
+hero-img: 'assets/web-header.jpg'
 ---

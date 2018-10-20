@@ -1,6 +1,7 @@
 const metalsmith = require('metalsmith')
 const markdown = require('metalsmith-markdown')
 const layouts = require('metalsmith-layouts')
+const static = require('metalsmith-static')
 
 metalsmith(__dirname)
     .metadata({
@@ -14,9 +15,13 @@ metalsmith(__dirname)
     })
     .source('./src')
     .destination('./public')
-    .clean(false)
+    .clean(true)
     .use(markdown())
     .use(layouts())
+    .use(static({
+        "src": "src",
+        "dest": "public"
+    }))
     .build(err => {
         if (err) throw err
     })
