@@ -1,1 +1,5 @@
 @import './hero.css';
+
+body {
+    margin: 0;
+}
