@@ -20,10 +20,6 @@ metalsmith(__dirname)
     .use(markdown())
     .use(layouts())
     .use(ignore("**/_dev/*"))
-    .use(static({
-        "src": "css",
-        "dest": "."
-    }))
     .build(err => {
         if (err) throw err
     })
