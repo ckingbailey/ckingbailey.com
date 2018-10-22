@@ -1,7 +1,11 @@
 const metalsmith = require('metalsmith')
-const markdown = require('metalsmith-markdown')
-const layouts = require('metalsmith-layouts')
+const msIf = require('metalsmith-if')
 const ignore = require('metalsmith-ignore')
+const inplace = require('metalsmith-in-place')
+const markdown = require('metalsmith-markdown')
+const watch = require('metalsmith-watch')
+
+const args = process.argv.slice(2)
 
 metalsmith(__dirname)
     .metadata({
@@ -17,8 +21,18 @@ metalsmith(__dirname)
     .destination('./public')
     .clean(true)
     .use(markdown())
-    .use(layouts())
+    .use(inplace())
     .use(ignore("**/_dev/*"))
+    .use(msIf(
+        args[0] === "watch",
+        watch({
+            paths: {
+                "${source}/**/*": "**/*",
+                "layouts/**/*": "**/*"
+            },
+            livereload: args[0] === "watch"
+        })
+    ))
     .build(err => {
         if (err) throw err
     })

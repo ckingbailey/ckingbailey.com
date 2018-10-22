@@ -1,0 +1,22 @@
+---
+headline: Web Developer
+stylesheet: 'css/index.css'
+icon: 'favicon.ico'
+nav_items:
+    github: https://github.com/ckingbailey
+    linkedin: https://linked.com/in/ckingbailey
+    resume: /resume.html
+    contact: #contact
+---
+<!doctype html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <link rel="icon" type="image/x-icon" href="{{ icon }}">
+        <link rel="stylesheet" href="{{ stylesheet }}">
+    </head>
+    <body>
+        {% include "./layouts/includes/nav.njk" %}
+        {% include "./layouts/includes/hero.njk" %}
+    </body>
+</html>
