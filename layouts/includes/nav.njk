@@ -1,8 +1,11 @@
 <nav class="nav">
-    <h1>{{ test }}</h1>
-    <ul>
-        {% for display, link in nav_items %}
-        <li><a href="{{ link }}">{{ display }}</a></li>
-        {% endfor %}
-    </ul>
+    <div class="grid justify-center">
+        <div class="six">
+            <ul class="grid justify-space text-center">
+                {% for display, link in nav_items %}
+                <li class="cell"><a href="{{ link }}">{{ display | upper }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 </nav>
