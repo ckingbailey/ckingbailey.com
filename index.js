@@ -36,5 +36,3 @@ metalsmith(__dirname)
     .build(err => {
         if (err) throw err
     })
-
-    var sar = `${source}/**/*`
