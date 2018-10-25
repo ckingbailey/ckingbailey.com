@@ -1,0 +1,12 @@
+<div class="projects">
+    <h1>Recent projects</h1>
+    <div class="grid">
+    {% for project in projects %}
+        <div class="cell project__project-card">
+            <h2>{{ project.name }}</h2>
+            <h2>{{ project.description }}</h2>
+            <h4>{{ project.stack }}</h4>
+        </div>
+    {% endfor %}
+    </div>
+</div>
