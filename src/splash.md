@@ -1,5 +1,4 @@
 ---
-layout: splash.njk
 ---
 I create software that helps people get things done better
 

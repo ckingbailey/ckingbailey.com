@@ -22,7 +22,7 @@ metalsmith(__dirname)
     .clean(true)
     .use(markdown())
     .use(inplace())
-    .use(ignore("**/_dev/*"))
+    .use(ignore([ "**/_dev/*", "../**/layouts/includes" ]))
     .use(msIf(
         args[0] === "watch",
         watch({
@@ -36,3 +36,5 @@ metalsmith(__dirname)
     .build(err => {
         if (err) throw err
     })
+
+    var sar = `${source}/**/*`
