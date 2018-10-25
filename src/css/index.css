@@ -1,7 +1,9 @@
 @import './thimble.css';
+@import './color.css';
 @import './type.css';
 @import './hero.css';
 @import './nav.css';
+@import './splash.css';
 
 body {
     margin: 0;
