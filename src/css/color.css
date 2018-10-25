@@ -1,5 +1,8 @@
 body {
+    --blue: #0072bc;
+    --pale-blue: #c7d6ee;
+    --blue-green: #58c5cc;
     --near-black: #202020;
-    --grey-2: #4c4c4c;
-    --grey-1: #666;
+    --grey-2: #434345;
+    --grey-1: #ededee;
 }
