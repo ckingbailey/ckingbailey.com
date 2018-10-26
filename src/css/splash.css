@@ -1,5 +1,6 @@
 .splash {
     padding: 12rem 0;
+    background-color: var(--grey-1);
 }
 
 .splash .splash__heading {
