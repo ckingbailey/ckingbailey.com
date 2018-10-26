@@ -3,9 +3,9 @@
     <div class="grid">
     {% for project in projects %}
         <div class="cell six text-center projects__project-card">
-            <h2 class="projects__project-name">{{ project.name }}</h2>
+            <h2 class="six margin-auto projects__project-name">{{ project.name | upper }}</h2>
             <h2 class="projects__project-description">{{ project.description }}</h2>
-            <h4 class="projects__project-stack">{{ project.stack }}</h4>
+            <h4 class="projects__project-stack">{{ project.stack | upper }}</h4>
         </div>
     {% endfor %}
     </div>

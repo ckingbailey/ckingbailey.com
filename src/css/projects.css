@@ -8,7 +8,16 @@
 }
 
 .projects__project-card {
+    padding: 4rem 0;
     color: white;
+}
+
+.projects__project-card>:nth-child(n+1):not(:last-child) {
+    margin-bottom: .85rem;
+}
+
+.projects__project-name {
+    border: 1px solid white;
 }
 
 .projects__project-description {
