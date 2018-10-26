@@ -21,6 +21,7 @@ body {
 }
 
 .form-control {
+    -webkit-appearance: none;
     display: block;
     margin-bottom: .35rem;
     box-shadow: none;
@@ -32,24 +33,28 @@ body {
     font-weight: bold;
     font-family: "Montserrat";
     color: var(--grey-3);
-    -webkit-appearance: none;
+    transition: all linear .08s;
+}
+
+.form-control::placeholder {
+    color: var(--grey-3);
+    transition: all linear .08s;
 }
 
 .form-control:focus {
     box-shadow: inset 0 0 1px var(--grey-3);
     border: 1px solid var(--grey-2);
     background-color: var(--grey-1);
+    transition: all linear .05s;
 }
 
 .form-control:focus::placeholder {
     color: var(--grey-2);
-}
-
-::placeholder {
-    color: var(--grey-3);
+    transition: all linear .05s;
 }
 
 button {
+    -webkit-appearance: none;
     box-shadow: none;
     border: none;
     border-radius: 0;
@@ -57,5 +62,4 @@ button {
     font-size: .9rem;
     font-weight: bold;
     font-family: "Montserrat";
-    -webkit-appearance: none;
 }
