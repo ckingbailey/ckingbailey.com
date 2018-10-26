@@ -1,6 +1,8 @@
 @import './thimble.css';
 @import './color.css';
 @import './type.css';
+
+@import './contact.css';
 @import './hero.css';
 @import './nav.css';
 @import './projects.css';
@@ -16,4 +18,48 @@ body {
 
 .margin-auto {
     margin-left: auto; margin-right: auto;
+}
+
+.form-control {
+    -webkit-appearance: none;
+    display: block;
+    margin-bottom: .35rem;
+    box-shadow: none;
+    border: 1px solid transparent;
+    width: 100%;
+    padding: .8rem;
+    background-color: var(--pale-blue);
+    font-size: .9rem;
+    font-weight: bold;
+    font-family: "Montserrat";
+    color: var(--grey-3);
+    transition: all linear .08s;
+}
+
+.form-control::placeholder {
+    color: var(--grey-3);
+    transition: all linear .08s;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 1px var(--grey-3);
+    /* border: 1px solid var(--grey-2); */
+    background-color: var(--grey-1);
+    transition: all linear .05s;
+}
+
+.form-control:focus::placeholder {
+    color: var(--grey-2);
+    transition: all linear .05s;
+}
+
+button {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: .65rem 3.5rem;
+    font-size: .9rem;
+    font-weight: bold;
+    font-family: "Montserrat";
 }
