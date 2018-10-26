@@ -3,8 +3,17 @@
 @import './type.css';
 @import './hero.css';
 @import './nav.css';
+@import './projects.css';
 @import './splash.css';
 
 body {
     margin: 0;
+}
+
+::selection {
+    background-color: var(--blue-green)!important;
+}
+
+.margin-auto {
+    margin-left: auto; margin-right: auto;
 }
