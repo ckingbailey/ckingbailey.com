@@ -3,19 +3,17 @@
 <div class="contact">
     <h1 class="text-center contact__heading">{{ contact_heading | upper }}</h1>
     <div class="grid">
-        <div class="cell six">
-            <form>
-            {% for placeholder in contact_inputs %}
-                <input class="form-control" type="text" placeholder="{{ placeholder | upper }}">
-            {% endfor %}
-            </form>
-        </div>
-        <div class="cell six text-center contact__details">
-            <div class="grid vertical justify-space">
+        <form class="cell six contact__form">
+            <input class="form-control" type="text" placeholder="name">
+            <input class="form-control" type="text" placeholder="phone">
+            <input class="form-control" type="text" placeholder="email">
+            <textarea class="form-control" rows="9" placeholder="message"></textarea>
+            <button type="submit" class="contact__form-button">send</button>
+        </form>
+        <div class="cell six grid vertical justify-around text-center contact__details">
             {% for detail in contact_details %}
                 <h3>{{ detail | upper }}</h3>
             {% endfor %}
-            </div>
         </div>
     </div>
 </div>

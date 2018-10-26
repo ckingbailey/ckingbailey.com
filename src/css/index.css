@@ -25,7 +25,23 @@ body {
     margin-bottom: .35rem;
     box-shadow: none;
     border: none;
-    padding: .5rem;
-    line-height: 1.1;
+    width: 100%;
+    padding: .65rem;
+    background-color: var(--pale-blue);
+    font-size: .9rem;
+    font-weight: bold;
+    font-family: "Montserrat";
+    color: var(--grey-2);
+    -webkit-appearance: none;
+}
+
+button {
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: .65rem 3.5rem;
+    font-size: .9rem;
+    font-weight: bold;
+    font-family: "Montserrat";
     -webkit-appearance: none;
 }
