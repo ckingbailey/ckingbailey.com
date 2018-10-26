@@ -1,11 +1,11 @@
 <div class="projects">
-    <h1>Recent projects</h1>
+    <h1 class="text-center projects__projects-heading">{{ projects_heading | upper}}</h1>
     <div class="grid">
     {% for project in projects %}
-        <div class="cell project__project-card">
-            <h2>{{ project.name }}</h2>
-            <h2>{{ project.description }}</h2>
-            <h4>{{ project.stack }}</h4>
+        <div class="cell six text-center projects__project-card">
+            <h2 class="projects__project-name">{{ project.name }}</h2>
+            <h2 class="projects__project-description">{{ project.description }}</h2>
+            <h4 class="projects__project-stack">{{ project.stack }}</h4>
         </div>
     {% endfor %}
     </div>

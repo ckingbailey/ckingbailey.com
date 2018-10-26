@@ -1,0 +1,17 @@
+.projects {
+    padding: 3.25rem 0;
+    background-color: var(--blue-green);
+}
+
+.projects__projects-heading {
+    margin-bottom: 3.25rem;
+}
+
+.projects__project-card {
+    color: white;
+}
+
+.projects__project-description {
+    font-family: "Baskerville";
+    font-style: italic;
+}
