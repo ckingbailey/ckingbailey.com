@@ -10,6 +10,8 @@
 
 body {
     margin: 0;
+    padding-bottom: 4.75rem;
+    background-color: var(--grey-3);
 }
 
 ::selection {
