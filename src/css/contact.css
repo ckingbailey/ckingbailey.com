@@ -1,0 +1,13 @@
+.contact {
+    padding: 3.625rem 0 3.75rem;
+    background-color: var(--blue);
+    color: white;
+}
+
+.contact__heading {
+    margin-bottom: 3.75rem;
+}
+
+.contact__details>:not(:last-child) {
+    margin-bottom: 2.25rem;
+}

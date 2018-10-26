@@ -1,6 +1,8 @@
 @import './thimble.css';
 @import './color.css';
 @import './type.css';
+
+@import './contact.css';
 @import './hero.css';
 @import './nav.css';
 @import './projects.css';
@@ -16,4 +18,14 @@ body {
 
 .margin-auto {
     margin-left: auto; margin-right: auto;
+}
+
+.form-control {
+    display: block;
+    margin-bottom: .35rem;
+    box-shadow: none;
+    border: none;
+    padding: .5rem;
+    line-height: 1.1;
+    -webkit-appearance: none;
 }

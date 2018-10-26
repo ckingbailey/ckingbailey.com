@@ -1,13 +1,21 @@
+{% set contact_details = [ name, tag, email ] %}
+
 <div class="contact">
-    <h1>{{ contact_heading | upper }}</h1>
+    <h1 class="text-center contact__heading">{{ contact_heading | upper }}</h1>
     <div class="grid">
         <div class="cell six">
-            <form></form>
+            <form>
+            {% for placeholder in contact_inputs %}
+                <input class="form-control" type="text" placeholder="{{ placeholder | upper }}">
+            {% endfor %}
+            </form>
         </div>
-        <div class="cell six">
-            <h3>{{ name | upper }}</h3>
-            <h3>{{ tag | upper }}</h3>
-            <h3>{{ email | upper }}</h3>
+        <div class="cell six text-center contact__details">
+            <div class="grid vertical justify-space">
+            {% for detail in contact_details %}
+                <h3>{{ detail | upper }}</h3>
+            {% endfor %}
+            </div>
         </div>
     </div>
 </div>
