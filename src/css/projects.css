@@ -9,6 +9,11 @@
     background-size: auto 100%;
     background-color: black;
     color: white;
+    transition: background-size .05s linear;
+}
+.projects__card:hover {
+    background-size: auto 110%;
+    transition: background-size .3s linear;
 }
 
 .projects__project-bg-container {
