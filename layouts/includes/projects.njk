@@ -2,9 +2,8 @@
     <h1 class="text-center projects__projects-heading">{{ projects_heading | upper}}</h1>
     <div class="grid">
     {% for project in projects %}
-        <div class="cell collapse collapse-padding six text-center projects__project-card">
-            <div class="projects__project-bg-container" style="background-image:url('./assets/{{ project.img_path }}');"></div>
-            <div class="projects__project-content-container">
+        <div class="cell collapse collapse-padding six text-center projects__card" style="background-image:url('./assets/{{ project.img }}_trans.png');">
+            <div class="projects__details">
                 <h2 class="six margin-auto projects__project-name">{{ project.name | upper }}</h2>
                 <h2 class="projects__project-description">{{ project.description }}</h2>
                 <h4 class="projects__project-stack">{{ project.stack | upper }}</h4>
