@@ -3,7 +3,21 @@
     background-color: var(--blue-green);
 }
 
+.projects__grid {
+    position: relative;
+}
+
+.projects__modal {
+    display: none;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .projects__card {
+    display: block;
     position: relative;
     background-position: center;
     background-size: auto 100%;
@@ -14,22 +28,6 @@
 .projects__card:hover {
     background-size: auto 110%;
     transition: background-size .3s linear;
-}
-
-.projects__project-bg-container {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    z-index: -1;
-    transition: background-size .05s linear;
-}
-
-.projects__project-bg-container:hover {
-    background-size: 110%;
-    transition: background-size .1s linear;
 }
 
 .projects__details {
