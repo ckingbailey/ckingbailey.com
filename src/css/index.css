@@ -64,6 +64,17 @@ button {
     font-family: "Montserrat";
 }
 
+.close-btn {
+    display: block;
+    border-radius: 50%;
+    padding: .25rem;
+    width: 2rem; height: 2rem;
+    background-color: var(--grey-1);
+    line-height: 0.01;
+    font-size: 1.75rem;
+    font-weight: normal;
+}
+
 .un-btn {
     padding: 0;
 }

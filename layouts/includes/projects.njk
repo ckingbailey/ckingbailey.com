@@ -1,10 +1,10 @@
 <div class="projects">
     <h1 class="text-center projects__projects-heading">{{ projects_heading | upper}}</h1>
-    <div class="grid">
+    <div class="grid projects__grid">
         {% for project in projects %}
         <button
             type="button"
-            onClick="return handleClick(event)"
+            onClick="return handleProjectCardClick(event)"
             class="cell collapse collapse-padding six text-center un-btn projects__card"
             style="background-image:url('./assets/{{ project.img }}_trans.png');"
         >
@@ -15,6 +15,10 @@
             </div>
         </button>
         {% endfor %}
-        <div id="projectModal" class="projects__modal"></div>
+        <div id="projectModal" class="projects__modal">
+            <div class="grid justify-end">
+                <button type="button" onclick="return handleCloseModalClick(event)" class="close-btn projects__close-btn">&times;</button>
+            </div>
+        </div>
     </div>
 </div>

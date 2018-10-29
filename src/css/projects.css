@@ -3,10 +3,6 @@
     background-color: var(--blue-green);
 }
 
-.projects__grid {
-    position: relative;
-}
-
 .projects__modal {
     display: none;
     position: absolute;
@@ -14,6 +10,10 @@
     width: 100%; height: 100%;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.projects__close-btn {
+    margin-top: .5rem; margin-right: .5rem;
 }
 
 .projects__card {
