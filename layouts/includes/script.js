@@ -7,13 +7,11 @@ const checkParentForBgImg = (target) => {
     return parent.style.backgroundImage || checkParentForBgImg(parent)
 }
 
-const handleProjectCardClick = ev => {
+const handleProjectCardClick = (ev, projectName) => {
     ev.preventDefault()
     const projectModal = document.getElementById('projectModal')
-    /* look up the tree for backgroundImage */
-    const bgImg = ev.target.style.backgroundImage || checkParentForBgImg(ev.target)
     projectModal.style.display = 'block'
-    projectModal.style.backgroundImage = `${bgImg}`
+    projectModal.style.backgroundImage = `url("./assets/img/${projectName}_screenshot.png")`
 }
 
 const handleCloseModalClick = ev => {

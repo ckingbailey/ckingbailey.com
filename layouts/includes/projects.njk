@@ -3,12 +3,12 @@
     <div class="grid projects__grid">
         {% for project in projects %}
         <div
-            onClick="return handleProjectCardClick(event)"
+            onClick="return handleProjectCardClick(event, '{{ project.name }}')"
             class="cell collapse collapse-padding six text-center projects__card"
             style="background-image:url('./assets/img/{{ project.img }}.png');"
         >
             <div class="projects__details">
-                <h2 class="six margin-auto projects__name">{{ project.name | upper }}</h2>
+                <h2 class="six margin-auto projects__name">{{ project.display_name | upper }}</h2>
                 <h2 class="projects__description">{{ project.description }}</h2>
                 <h4 class="projects__stack">{{ project.stack | upper }}</h4>
             </div>
