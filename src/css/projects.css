@@ -1,6 +1,6 @@
 .projects {
     --project-img-pad: 1rem;
-    --modal-nav-pos: calc(var(--project-img-pad) * 1.5);
+    --modal-nav-pos: calc(var(--project-img-pad) / 2);
 }
 
 .projects__projects-heading {
