@@ -28,18 +28,32 @@
 
 .projects__details {
     padding: 20% 0;
-    /* background-color: #00000079; */
+    background-color: transparent;
+    transition: all .075s linear;
+    opacity: 0;
 }
+
+.projects__details:hover {
+    background-color: #00000079;
+    opacity: 1;
+    transition: all .15s linear;
+}
+
+/* .projects__details:hover .projects__name,
+.projects__details:hover .projects__description,
+.projects__details:hover .projects__stack {
+    opacity: 1;
+} */
 
 .projects__details>:nth-child(n+1):not(:last-child) {
     margin-bottom: .85rem;
 }
 
-.projects__project-name {
+.projects__name {
     border: 1px solid white;
 }
 
-.projects__project-description {
+.projects__description {
     font-family: "Baskerville";
     font-style: italic;
 }

@@ -2,18 +2,17 @@
     <h1 class="text-center projects__projects-heading">{{ projects_heading | upper}}</h1>
     <div class="grid projects__grid">
         {% for project in projects %}
-        <button
-            type="button"
+        <div
             onClick="return handleProjectCardClick(event)"
-            class="cell collapse collapse-padding six text-center un-btn projects__card"
+            class="cell collapse collapse-padding six text-center projects__card"
             style="background-image:url('./assets/img/{{ project.img }}.png');"
         >
             <div class="projects__details">
-                <h2 class="six margin-auto projects__project-name">{{ project.name | upper }}</h2>
-                <h2 class="projects__project-description">{{ project.description }}</h2>
-                <h4 class="projects__project-stack">{{ project.stack | upper }}</h4>
+                <h2 class="six margin-auto projects__name">{{ project.name | upper }}</h2>
+                <h2 class="projects__description">{{ project.description }}</h2>
+                <h4 class="projects__stack">{{ project.stack | upper }}</h4>
             </div>
-        </button>
+        </div>
         {% endfor %}
         <div id="projectModal" class="projects__modal">
             <div class="grid justify-end">
