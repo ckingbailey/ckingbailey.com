@@ -24,6 +24,11 @@
     color: white;
 }
 
+.contact__form-button:active {
+    background-color: var(--near-black);
+    color: var(--grey-2);
+}
+
 .contact__details {
     padding-top: 3rem; padding-bottom: 4.5rem;
 }
