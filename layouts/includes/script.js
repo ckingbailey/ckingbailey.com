@@ -10,13 +10,15 @@ const checkParentForBgImg = (target) => {
 const handleProjectCardClick = (ev, projectName) => {
     ev.preventDefault()
     const projectModal = document.getElementById('projectModal')
+    const projectImg = document.getElementById('projectImg')
     projectModal.style.display = 'block'
-    projectModal.style.backgroundImage = `url("./assets/img/${projectName}_screenshot.png")`
+    projectImg.src = `./assets/img/${projectName}_screenshot.png`
 }
 
 const handleCloseModalClick = ev => {
     ev.preventDefault()
     const projectModal = document.getElementById('projectModal')
+    const projectImg = document.getElementById('projectImg')
     projectModal.style.display = 'none'
-    projectModal.style.backgroundImage = ''
+    projectImg.src = ''
 }
