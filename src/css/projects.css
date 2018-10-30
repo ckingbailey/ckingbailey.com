@@ -13,7 +13,7 @@
 }
 
 .projects__close-btn {
-    margin-top: .5rem; margin-right: .5rem;
+    margin-top: .75rem; margin-right: .85rem;
 }
 
 .projects__card {
@@ -24,10 +24,6 @@
     background-color: black;
     color: white;
     transition: background-size .05s linear;
-}
-.projects__card:hover {
-    background-size: auto 110%;
-    transition: background-size .3s linear;
 }
 
 .projects__details {

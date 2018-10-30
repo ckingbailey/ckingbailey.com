@@ -66,8 +66,9 @@ button {
 
 .close-btn {
     display: block;
+    border: 1px solid var(--grey-2);
     border-radius: 50%;
-    padding: .25rem;
+    padding: .1rem;
     width: 2rem; height: 2rem;
     background-color: var(--grey-1);
     line-height: 0.01;
