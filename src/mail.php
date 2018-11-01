@@ -9,15 +9,17 @@ if (empty($_POST)) {
     exit;
 }
 
+$cleanPost = filter_input_array(INPUT_POST, FILTER_SANITIZE_SPECIAL_CHARS);
+
 $mailer = new Mailgun(MAILGUN_API_KEY);
 $domain = MAILGUN_DOMAIN;
 $mailgunUser = 'postmaster@' . $domain;
 
 $result = $mailer->sendMessage($domain, [
-    'from' => $mailgunUser,
+    'from' => 'colin@ckingbailey.com',
     'to' => 'ckingbailey@gmail.com',
-    'subject' => 'hello test',
-    'text' => 'This is a test of the Mailgun email service'
+    'subject' => "new message from {$cleanPost['name']}",
+    'text' => "{$cleanPost['name']} [{$cleanPost['email']}] says:\r\n\r\n{$cleanPost['message']}\r\n\r\n{$cleanPost['name']}\r\n{$cleanPost['email']}\r\n{$cleanPost['phone']}"
 ]);
 
 if (!$result) {
