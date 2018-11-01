@@ -4,11 +4,11 @@
     <div class="ten">
         <h1 class="text-center contact__heading">{{ contact_heading | upper }}</h1>
         <div class="grid">
-            <form class="six contact__form">
-                <input class="form-control" type="text" placeholder="name">
-                <input class="form-control" type="text" placeholder="phone">
-                <input class="form-control" type="text" placeholder="email">
-                <textarea class="form-control" rows="9" placeholder="message"></textarea>
+            <form action="./mail.php" method="POST" class="six contact__form">
+                <input type="text" name="name" class="form-control" placeholder="name">
+                <input type="text" name="phone" class="form-control" placeholder="phone">
+                <input type="text" name="email" class="form-control" placeholder="email">
+                <textarea name="message" class="form-control" rows="9" placeholder="message"></textarea>
                 <button type="submit" class="contact__form-button">send</button>
             </form>
             <div class="six grid vertical justify-around text-center contact__details">
