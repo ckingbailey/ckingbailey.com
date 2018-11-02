@@ -30,8 +30,8 @@ $result = $mailer->sendMessage($domain, [
 ]);
 
 list($status, $body) = $result
-    ? [ 200, 'Thank you for your message. You can expect to hear from me soon.' ]
-    : [ 500, 'There was a problem sending your message.' ];
+    ? [ 200, 'Message sent.' ]
+    : [ 500, 'I\'m sorry, there was a problem sending your message.' ];
 
 header("Status: $status");
 echo $body;

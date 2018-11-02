@@ -35,6 +35,11 @@ const handleSubmit = ev => {
         method: 'POST',
         body: formData
     })
-    .then(res => res.text())
-    .then (text => console.log(text));
+    .then((res, rej) => res.text())
+    .then (text => {
+        const modal = document.getElementById('contactModal')
+        modal.children['contactResMsg'].innerText = text
+        modal.classList.add('success')
+        modal.style.display = 'block'
+    });
 }

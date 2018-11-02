@@ -8,6 +8,24 @@
     margin-bottom: 3.75rem;
 }
 
+.contact__form {
+    position: relative;
+}
+
+.contact__modal {
+    display: none;
+    position: absolute;
+    top: 1rem; left: 1rem;
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    padding: 1rem;
+}
+
+.contact__modal .success {
+    background-color: green;
+    color: yellow;
+}
+
 .contact__form, .contact__details {
     padding-left: 2rem; padding-right: 2rem;
 }
