@@ -3,12 +3,16 @@ use Mailgun\Mailgun;
 
 require '../vendor/autoload.php';
 
-if ($_SERVER['REQUEST_METHOD'] !== $_POST) {
-    header('Bad request, naughty naughty', true, 400);
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('Bad method', true, 405);
+    echo "Bad method: {$_SERVER['REQUEST_METHOD']}";
     exit;
 }
-if (empty($_POST)) {
-    header('Location: ./index.html');
+if (empty($_POST)
+    || empty($_POST['name'])
+    || empty($_POST['email'])
+    || empty($_POST['message'])) {
+    header('Request malformed', true, 400);
     exit;
 }
 
