@@ -1,0 +1,23 @@
+.nav {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    background-color: #20202066;
+    font-family: "Montserrat"
+}
+
+.nav ul {
+    margin: 0;
+    padding: 2.5rem 0 2.65rem;
+}
+
+.nav li {
+    display: inline;
+    list-style-type: none;
+    font-weight: bold;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,8 @@
+<div class="grid justify-center splash">
+    <div class="five text-center">
+        <h1 class="splash__heading">{{ headline | upper }}</h1>
+        {% for p in summary %}
+        <p class="splash__summary-line">{{ p | escape }}</p>
+        {% endfor %}
+    </div>
+</div>

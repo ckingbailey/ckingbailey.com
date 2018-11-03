@@ -1,0 +1,41 @@
+{
+  "name": "ckingbailey.com",
+  "version": "1.0.0",
+  "description": "Colin King-Bailey's portfolio and resume site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckingbailey/ckingbailey.com.git"
+  },
+  "keywords": [
+    "ckb",
+    "web-developer",
+    "node",
+    "javascript",
+    "react",
+    "metalsmith",
+    "portfolio",
+    "resume"
+  ],
+  "author": "ckb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ckingbailey/ckingbailey.com/issues"
+  },
+  "homepage": "https://github.com/ckingbailey/ckingbailey.com#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jstransformer-markdown": "^1.2.1",
+    "jstransformer-nunjucks": "^0.5.0",
+    "metalsmith": "^2.3.0",
+    "metalsmith-if": "^0.1.1",
+    "metalsmith-ignore": "^1.0.0",
+    "metalsmith-in-place": "^4.2.0",
+    "metalsmith-layouts": "^2.2.0",
+    "metalsmith-markdown": "^1.0.1",
+    "metalsmith-watch": "^1.0.3"
+  }
+}

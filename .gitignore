@@ -1,1 +1,18 @@
 .DS_Store
+.sass-cache
+
+# don't version control dependencies
+node_modules
+vendor
+
+# don't version control the build
+public/
+
+# sensitive information
+info.php
+php.ini
+php_error.log
+config.php
+
+_old*
+_dev*

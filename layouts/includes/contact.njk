@@ -1,0 +1,24 @@
+{% set contact_details = [ name, tag, email ] %}
+
+<div id="contact" class="grid justify-center contact">
+    <div class="ten">
+        <h1 class="text-center contact__heading">{{ contact_heading | upper }}</h1>
+        <div class="grid">
+            <form id="mailForm" onsubmit="return handleSubmit(event)" class="six contact__form">
+                <input type="text" name="name" class="form-control" placeholder="name">
+                <input type="text" name="phone" class="form-control" placeholder="phone">
+                <input type="text" name="email" class="form-control" placeholder="email">
+                <textarea name="message" class="form-control" rows="9" placeholder="message"></textarea>
+                <button type="submit" class="contact__form-button">send</button>
+                <div id="contactModal" class="contact__modal">
+                    <p id="contactResMsg"></p>
+                </div>
+            </form>
+            <div class="six grid vertical justify-around text-center contact__details">
+                {% for detail in contact_details %}
+                    <h3>{{ detail | upper }}</h3>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

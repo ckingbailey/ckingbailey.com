@@ -1,0 +1,12 @@
+.splash {
+    padding: 12rem 0;
+    background-color: var(--grey-1);
+}
+
+.splash .splash__heading {
+    margin-bottom: 7.5rem;
+}
+
+.splash__summary-line {
+    margin-bottom: 1.125rem;
+}

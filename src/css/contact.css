@@ -1,0 +1,80 @@
+.contact {
+    padding: 3.625rem 0 3.75rem;
+    background-color: var(--blue);
+    color: white;
+}
+
+.contact__heading {
+    margin-bottom: 3.75rem;
+}
+
+.contact__form {
+    position: relative;
+}
+
+.contact__modal {
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    position: absolute;
+    top: .25rem; left: 2.25rem;
+    width: calc(100% - 4.5rem);
+    height: calc(100% - .6rem);
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contact__modal>p {
+    margin-bottom: 2rem;
+}
+
+.form-control[disabled] {
+    background-color: var(--grey-2);
+    color: var(--grey-3);
+}
+
+.form-control[disabled]::placeholder {
+    color: var(--grey-3);
+}
+
+button[disabled] {
+    border-color: var(--grey-4);
+    background-color: var(--grey-3);
+    color: var(--grey-2);
+}
+
+.contact__modal.success {
+    border: 2px solid var(--blue);
+    background-color: #202020cc;
+    color: white;
+}
+
+.contact__form, .contact__details {
+    padding-left: 2rem; padding-right: 2rem;
+}
+
+.contact__form .form-control, .contact__form button {
+    text-transform: uppercase;
+}
+
+.contact__form-button {
+    display: block;
+    margin-top: .75rem;
+    margin-left: auto;
+    background-color: var(--grey-4);
+    color: white;
+}
+
+.contact__form-button:active {
+    background-color: var(--near-black);
+    color: var(--grey-3);
+}
+
+.contact__details {
+    padding-top: 3rem; padding-bottom: 4.5rem;
+}
+
+.contact__details>:nth-child(n) {
+    margin-bottom: 2.25rem;
+}

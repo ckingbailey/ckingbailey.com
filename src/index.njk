@@ -1,0 +1,68 @@
+---
+name: Colin King-Bailey
+tag: Front-end super genius for hire
+email: ckingbailey@gmail.com
+
+stylesheet: 'css/index.css'
+icon: 'assets/favicon.ico'
+
+nav_items:
+    github: https://github.com/ckingbailey
+    linkedin: https://linked.com/in/ckingbailey
+    resume: /resume.html
+    contact: "#contact"
+
+headline: Web Developer
+summary:
+    - I create software that helps people do things better
+    - In addition to static marketing pages, I recently created a fullstack web app for managing data related to the end phase of infrastructure construction projects
+    - Let's work together
+
+projects_heading: Recent projects
+projects:
+    - name: turtrello
+      display_name: Turtrello
+      description: Kanban board
+      stack: React, Firebase
+      img: turtrello_macbook_pro
+    - name: damss
+      display_name: D.A.M.S.S.
+      description: Find high-risk dams in your area
+      stack: React, ArcGIS
+      img: damss_color_bg
+    - name: svbx
+      display_name: svbx.org
+      description: Track end phase construction data for BART extension to Silicon Valley
+      stack: LAMP stack, JS DOM APIs, D3
+      img: svbx_macbook
+    - name: open_disclosure
+      display_name: Open Disclosure
+      description: Track campaign finance in Bay Area elections
+      stack: Ruby, Jekyll, React
+      img: open_disclosure_imac
+
+contact_heading: Get in touch
+contact_inputs:
+    - name
+    - phone
+    - email
+    - message
+---
+<!doctype html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <link rel="icon" type="image/x-icon" href="{{ icon }}">
+        <link rel="stylesheet" href="{{ stylesheet }}">
+    </head>
+    <body>
+        {% include "./layouts/includes/nav.njk" %}
+        {% include "./layouts/includes/hero.njk" %}
+        {% include "./layouts/includes/splash.njk" %}
+        {% include "./layouts/includes/projects.njk" %}
+        {% include "./layouts/includes/contact.njk" %}
+        <script type="text/javascript">
+        {% include "./layouts/includes/script.js" %}
+        </script>
+    </body>
+</html>
