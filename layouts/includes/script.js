@@ -22,19 +22,31 @@ const handleCloseModalClick = ev => {
 
 const handleSubmit = ev => {
     ev.preventDefault()
-    const form = document.forms['mailForm']
     const formData = new FormData(ev.target)
 
-    console.log({
-        name: formData.get('name'),
-        email: formData.get('email'),
-        phone: formData.get('phone'),
-        message: formData.get('message')
-    })
     fetch('mail.php', {
         method: 'POST',
         body: formData
     })
-    .then(res => res.text())
-    .then (text => console.log(text));
+    .then((res, rej) => res.text())
+    .then (text => {
+        const message = text === 'Message sent.'
+            ? 'Thanks for your message. You\'ll be hearing from me soon.'
+            : 'I\'m sorry, there was a problem sending your message.'
+        showModal(message)
+    });
+}
+
+const showModal = text => {
+    const form = document.forms['mailForm']
+    const modal = document.getElementById('contactModal')
+    const msgContainer = modal.children['contactResMsg']
+
+    Array.from(form.elements).forEach(el => {
+        el.setAttribute('disabled', '')
+    })
+
+    msgContainer.innerText = text
+    modal.classList.add('success')
+    modal.style.display = 'flex'
 }

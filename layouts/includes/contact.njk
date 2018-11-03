@@ -10,6 +10,9 @@
                 <input type="text" name="email" class="form-control" placeholder="email">
                 <textarea name="message" class="form-control" rows="9" placeholder="message"></textarea>
                 <button type="submit" class="contact__form-button">send</button>
+                <div id="contactModal" class="contact__modal">
+                    <p id="contactResMsg"></p>
+                </div>
             </form>
             <div class="six grid vertical justify-around text-center contact__details">
                 {% for detail in contact_details %}
