@@ -4,8 +4,9 @@ body {
     --cyan: #01BAEF;
     --blue-green: #58c5cc;
     --near-black: #202020;
-    --grey-3: #434345;
-    --grey-2: #666;
+    --grey-4: #434345;
+    --grey-3: #666668;
+    --grey-2: #aaaaac;
     --grey-1: #ededee;
 
     --focus-color: var(--cyan);
