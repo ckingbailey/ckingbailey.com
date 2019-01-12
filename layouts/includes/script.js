@@ -29,15 +29,14 @@ const handleSubmit = ev => {
         body: formData
     })
     .then((res, rej) => {
-        if (status.ok) return res.text()
+        if (res.ok) return res.text()
         return res.json()
     })
     .then (res => {
-        console.log(res);
-        // const message = res === 'Message sent.'
-        //     ? 'Thanks for your message. You\'ll be hearing from me soon.'
-        //     : 'I\'m sorry, there was a problem sending your message.'
-        // showModal(message)
+        const message = res === 'Message sent.'
+            ? 'Thanks for your message. You\'ll be hearing from me soon.'
+            : 'I\'m sorry, there was a problem sending your message.'
+        showModal(message)
     });
 }
 

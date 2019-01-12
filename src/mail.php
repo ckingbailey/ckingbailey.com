@@ -45,5 +45,5 @@ list($status, $body) = $result
     ? [ 200, 'Message sent.' ]
     : [ 500, 'I\'m sorry, there was a problem sending your message.' ];
 
-header("Status: $status");
+header("Status: $status", true, $status);
 echo $body;
