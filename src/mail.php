@@ -16,6 +16,18 @@ if (empty($_POST)
     exit;
 }
 
+$accept_origin = [
+    'dev' => 'http://ckingbailey.localhost:8888',
+    'prod' => 'http://ckingbailey.com'
+];
+
+if ($_SERVER['HTTP_ORIGIN'] !== $accept_origin[($_ENV['PHP_ENV'] ?: 'prod')]) {
+    header('No cors', true, 403);
+    if ($_ENV['PHP_ENV'] === 'dev') echo json_encode($_SERVER);
+    exit;
+}
+
+// TODO: validate email
 $cleanPost = filter_input_array(INPUT_POST, FILTER_SANITIZE_SPECIAL_CHARS);
 
 $mailer = new Mailgun(MAILGUN_API_KEY);
