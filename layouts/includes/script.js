@@ -28,9 +28,12 @@ const handleSubmit = ev => {
         method: 'POST',
         body: formData
     })
-    .then((res, rej) => res.text())
-    .then (text => {
-        const message = text === 'Message sent.'
+    .then((res, rej) => {
+        if (res.ok) return res.text()
+        return res.json()
+    })
+    .then (res => {
+        const message = res === 'Message sent.'
             ? 'Thanks for your message. You\'ll be hearing from me soon.'
             : 'I\'m sorry, there was a problem sending your message.'
         showModal(message)
