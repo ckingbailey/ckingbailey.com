@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "node index",
+    "start": "npm run build",
     "watch": "node index watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
