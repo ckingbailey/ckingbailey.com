@@ -40,7 +40,6 @@ $result = $mailer->sendMessage($domain, [
     'subject' => "new message from {$cleanPost['name']}",
     'text' => "{$cleanPost['name']} [{$cleanPost['email']}] says:\r\n\r\n{$cleanPost['message']}\r\n\r\n{$cleanPost['name']}\r\n{$cleanPost['email']}\r\n{$cleanPost['phone']}"
 ]);
-error_log(print_r($result, true));
 
 list($status, $body) = $result
     ? [ 200, 'Message sent.' ]
