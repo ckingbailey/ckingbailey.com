@@ -30,8 +30,8 @@ if ($_SERVER['HTTP_ORIGIN'] !== $accept_origin[($_ENV['PHP_ENV'] ?: 'prod')]) {
 // TODO: validate email
 $cleanPost = filter_input_array(INPUT_POST, FILTER_SANITIZE_SPECIAL_CHARS);
 
-$mailer = new Mailgun(MAILGUN_API_KEY);
-$domain = MAILGUN_DOMAIN;
+$mailer = new Mailgun(getenv('MAILGUN_API_KEY'));
+$domain = getenv("MAILGUN_DOMAIN");
 $mailgunUser = 'postmaster@' . $domain;
 
 $result = $mailer->sendMessage($domain, [
@@ -45,5 +45,6 @@ list($status, $body) = $result
     ? [ 200, 'Message sent.' ]
     : [ 500, 'I\'m sorry, there was a problem sending your message.' ];
 
-header("Status: $status", true, $status);
+
+http_response_code($status);
 echo $body;
