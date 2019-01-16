@@ -27,12 +27,9 @@ const handleSubmit = ev => {
     fetch('mail.php', {
         method: 'POST',
         body: formData
-    })
-    .then((res, rej) => {
-        if (res.ok) return res.text()
-        return res.json()
-    })
-    .then (res => {
+    }).then((res, rej) => res.text())
+    .then(res => {
+        console.log(res);
         const message = res === 'Message sent.'
             ? 'Thanks for your message. You\'ll be hearing from me soon.'
             : 'I\'m sorry, there was a problem sending your message.'
