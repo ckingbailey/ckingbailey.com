@@ -3,6 +3,18 @@ use Mailgun\Mailgun;
 
 require '../vendor/autoload.php';
 
+function compareOriginWithHost() {
+    $scheme = !empty($_SERVER['REQUEST_SCHEME'])
+        ? $_SERVER['REQUEST_SCHEME']
+        : ((!empty($_SERVER['HTTPS']) && strcasecmp($_SERVER['HTTPS'], 'off') !== 0)
+            ? 'https'
+            : 'http');
+    $host = "$scheme://{$_SERVER['SERVER_NAME']}";
+    if (empty($_SERVER['HTTP_ORIGIN'])) return false;
+    if (strpos($_SERVER['HTTP_ORIGIN'], $host) !== 0) return false;
+    return true;
+}
+
 error_log('mail route requested');
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     error_log("Bad method: {$_SERVER['REQUEST_METHOD']}");
@@ -18,15 +30,9 @@ if (empty($_POST)
     exit;
 }
 
-$accept_origin = [
-    'dev' => 'http://ckingbailey.localhost:8888',
-    'prod' => 'https://ckingbailey.herokuapp.com/'
-];
-
-if ($_SERVER['HTTP_ORIGIN'] !== $accept_origin[($_ENV['PHP_ENV'] ?: 'prod')]) {
-    error_log('No cors: ' . $_SERVER['HTTP_ORIGIN']);
+if (!compareOriginWithHost()) {
+    error_log("No cors: {$_SERVER['REQUEST_SCHEME']}://{$_SERVER['SERVER_NAME']} *vs* {$_SERVER['HTTP_ORIGIN']}");
     header('No cors', true, 403);
-    if ($_ENV['PHP_ENV'] === 'dev') echo json_encode($_SERVER);
     exit;
 }
 
