@@ -3,6 +3,7 @@ use Mailgun\Mailgun;
 
 require '../vendor/autoload.php';
 
+error_log('mail route requested');
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     error_log("Bad method: {$_SERVER['REQUEST_METHOD']}");
     header('Bad method', true, 405);
