@@ -50,11 +50,6 @@ button[disabled] {
     color: white;
 }
 
-.contact__form, .contact__details {
-    padding-left: 2rem;
-    /* padding-right: 2rem; */
-}
-
 .contact__form .form-control, .contact__form button {
     text-transform: uppercase;
 }
