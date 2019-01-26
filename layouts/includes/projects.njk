@@ -4,7 +4,7 @@
         {% for project in projects %}
         <div
             onClick="return handleProjectCardClick(event, '{{ project.name }}')"
-            class="cell collapse collapse-padding six text-center projects__card"
+            class="cell collapse collapse-padding medium-six text-center projects__card"
             style="background-image:url('./assets/img/{{ project.img }}.png');"
         >
             <div class="projects__details">

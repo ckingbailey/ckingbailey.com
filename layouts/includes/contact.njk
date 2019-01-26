@@ -1,10 +1,10 @@
 {% set contact_details = [ name, tag, email ] %}
 
 <div id="contact" class="grid justify-center contact">
-    <div class="ten">
+    <div class="medium-ten">
         <h1 class="text-center contact__heading">{{ contact_heading | upper }}</h1>
         <div class="grid">
-            <form id="mailForm" onsubmit="return handleSubmit(event)" class="six contact__form">
+            <form id="mailForm" onsubmit="return handleSubmit(event)" class="medium-six contact__form">
                 <input type="text" name="honey" class="invisible">
                 <input type="text" name="name" class="form-control" placeholder="name">
                 <input type="text" name="phone" class="form-control" placeholder="phone">
@@ -15,7 +15,7 @@
                     <p id="contactResMsg"></p>
                 </div>
             </form>
-            <div class="six grid vertical justify-around text-center contact__details">
+            <div class="medium-six grid vertical justify-around text-center contact__details">
                 {% for detail in contact_details %}
                     <h3>{{ detail | upper }}</h3>
                 {% endfor %}
