@@ -5,6 +5,7 @@
         <h1 class="text-center contact__heading">{{ contact_heading | upper }}</h1>
         <div class="grid">
             <form id="mailForm" onsubmit="return handleSubmit(event)" class="six contact__form">
+                <input type="text" name="honey" class="invisible">
                 <input type="text" name="name" class="form-control" placeholder="name">
                 <input type="text" name="phone" class="form-control" placeholder="phone">
                 <input type="text" name="email" class="form-control" placeholder="email">

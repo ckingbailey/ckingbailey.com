@@ -9,7 +9,7 @@ const args = process.argv.slice(2)
 
 metalsmith(__dirname)
     .metadata({
-        title: "ckb - front-end super genius",
+        title: "CKB - Software doula",
         siteUrl: "http://ckingbailey.com",
         author: "Colin King-Bailey",
         description: "Colin King-Bailey's portfolio and resume",
