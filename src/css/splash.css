@@ -1,12 +1,23 @@
 .splash {
-    padding: 12rem 0;
+    padding: 6rem 1rem;
     background-color: var(--grey-1);
+    text-align: center;
 }
 
-.splash .splash__heading {
-    margin-bottom: 7.5rem;
+.splash__heading {
+    margin-bottom: 2.5rem;
 }
 
 .splash__summary-line {
     margin-bottom: 1.125rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .splash {
+        padding: 12rem 0;
+    }
+    
+    .splash__heading {
+        margin-bottom: 7.5rem;
+    }
 }

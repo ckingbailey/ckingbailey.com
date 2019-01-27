@@ -1,6 +1,7 @@
 ---
+title: CKB - Software shaman
 name: Colin King-Bailey
-tag: Front-end super genius for hire
+tag: Software shaman for hire
 email: ckingbailey@gmail.com
 
 stylesheet: 'css/index.css'
@@ -20,6 +21,16 @@ summary:
 
 projects_heading: Recent projects
 projects:
+    - name: svbx
+      display_name: svbx.org
+      description: Track end phase construction data for BART extension to Silicon Valley
+      stack: LAMP stack, JS DOM APIs, D3
+      img: svbx_macbook
+    - name: open_disclosure
+      display_name: Open Disclosure
+      description: Find out where the money comes from in East Bay elections
+      stack: Ruby, Jekyll, React
+      img: open_disclosure_imac
     - name: turtrello
       display_name: Turtrello
       description: Kanban board
@@ -30,16 +41,6 @@ projects:
       description: Find high-risk dams in your area
       stack: React, ArcGIS
       img: damss_color_bg
-    - name: svbx
-      display_name: svbx.org
-      description: Track end phase construction data for BART extension to Silicon Valley
-      stack: LAMP stack, JS DOM APIs, D3
-      img: svbx_macbook
-    - name: open_disclosure
-      display_name: Open Disclosure
-      description: Track campaign finance in Bay Area elections
-      stack: Ruby, Jekyll, React
-      img: open_disclosure_imac
 
 contact_heading: Get in touch
 contact_inputs:
@@ -54,6 +55,7 @@ contact_inputs:
         <title>{{ title }}</title>
         <link rel="icon" type="image/x-icon" href="{{ icon }}">
         <link rel="stylesheet" href="{{ stylesheet }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         {% include "./layouts/includes/nav.njk" %}
