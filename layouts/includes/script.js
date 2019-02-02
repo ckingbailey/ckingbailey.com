@@ -8,8 +8,11 @@ const handleProjectCardClick = (ev, projectName) => {
     ev.preventDefault()
     const projectModal = document.getElementById('projectModal')
     const projectImg = document.getElementById('projectImg')
+    const displayMobile = !window.matchMedia('(min-width: 768px)').matches
+        ? '_mobile' : ''
+    console.log(displayMobile)
     projectModal.style.display = 'block'
-    projectImg.src = `./assets/img/${projectName}_screenshot.png`
+    projectImg.src = `./assets/img/${projectName}_screenshot${displayMobile}.png`
 }
 
 const handleCloseModalClick = ev => {

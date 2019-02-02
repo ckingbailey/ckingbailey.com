@@ -12,9 +12,9 @@
     display: none;
     position: absolute;
     top: 0; left: 0;
-    width: 100%; height: 100%;
-    padding: var(--project-img-pad);
-    text-align: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
 }
 
 .projects__modal-nav-container {
@@ -24,6 +24,22 @@
 
 .projects__modal .close-btn {
     background-color: #ededeebb;
+}
+
+@media only screen and (min-width: 768px) {
+    .projects__modal {
+        height: 100%;
+        padding: var(--project-img-pad);
+    }
+    
+    .projects__modal-nav-container {
+        position: absolute;
+        top: var(--modal-nav-pos); right: var(--modal-nav-pos);
+    }
+    
+    .projects__modal .close-btn {
+        background-color: #ededeebb;
+    }    
 }
 
 .projects__full-img {
