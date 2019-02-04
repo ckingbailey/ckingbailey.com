@@ -1,6 +1,6 @@
 <div class="projects">
     <h1 class="text-center projects__projects-heading">{{ projects_heading | upper}}</h1>
-    <div class="grid projects__grid">
+    <div id="projects" class="grid projects__grid">
         {% for project in projects %}
         <div
             onClick="return handleProjectCardClick(event, '{{ project.name }}')"
