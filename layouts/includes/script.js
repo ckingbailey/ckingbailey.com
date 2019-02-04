@@ -6,13 +6,16 @@ const checkParentForBgImg = (target) => {
 
 const handleProjectCardClick = (ev, projectName) => {
     ev.preventDefault()
-    const projectModal = document.getElementById('projectModal')
-    const projectImg = document.getElementById('projectImg')
+    document.getElementById('projectModal').style.display = 'block'
     const displayMobile = !window.matchMedia('(min-width: 768px)').matches
         ? '_mobile' : ''
-    console.log(displayMobile)
-    projectModal.style.display = 'block'
-    projectImg.src = `./assets/img/${projectName}_screenshot${displayMobile}.png`
+    const imgSrc = `./assets/img/${projectName}_screenshot${displayMobile}.png`
+    document.getElementById('projectImg').setAttribute('src', imgSrc)
+    if (displayMobile) {
+        document.body.style.overflow = 'hidden'
+    } else {
+        window.location = '#projects'
+    }
 }
 
 const handleCloseModalClick = ev => {
@@ -20,7 +23,10 @@ const handleCloseModalClick = ev => {
     const projectModal = document.getElementById('projectModal')
     const projectImg = document.getElementById('projectImg')
     projectModal.style.display = 'none'
-    projectImg.src = ''
+    if (document.body.style.overflow !== 'scroll') {
+        document.body.style.overflow = 'scroll'
+    }
+    projectImg.removeAttribute('src')
 }
 
 const handleSubmit = ev => {
