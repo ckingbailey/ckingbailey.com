@@ -67,9 +67,6 @@
         a:hover {
             color: var(--thimble-orange);
         }
-        /* a:hover {
-            color: #69d;
-        } */
         address {
             font-style: normal;
         }
@@ -128,7 +125,6 @@
             margin-left: -.5rem;
             font-size: 1rem;
             font-family: var(--heading-font);
-            /* font-style: italic; */
         }
         .text-grey {
             color: var(--dark-grey);
@@ -138,7 +134,7 @@
                 padding-left: 2.15rem;
             }
             .resume {
-                padding: .5in .55in .55in;
+                padding: .5in;
             }
             .personal-information, .personal-information__contact-info {
                 margin-left: auto; margin-right: auto;
@@ -157,6 +153,14 @@
                 width: 10px;
                 height: 10px;
                 background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="10" height="10"><polygon points="3 3, 7 3, 7 7, 3 7" fill="none" stroke-width="1" stroke="%23333" /></svg>');
+            }
+        }
+        @media print {
+            .resume {
+                padding: .45in .4in;
+            }
+            a {
+                color: var(--dark-blue);
             }
         }
     </style>
@@ -200,7 +204,7 @@
                     <h5 class="content-section__sub-title">2018 - present</h5>
                     <ul>
                         <li>Expose critical construction deficiencies using a portable web interface and database tracking completion work on  civic infrastructure projects</li>
-                        <li>Capture 125% more contractors' by making app mobile-responsive</li>
+                        <li>Engage 125% more contractors' by making app mobile-responsive</li>
                         <li>Cut time to complete interactions by a third with interactive JavaScript components</li>
                         <li>Squash users' bug complaints by 90% with prettier exception handling</li>
                         <li>Thwart hackers by auditing and fixing SQL and authentication vulnerabilities</li>
@@ -250,8 +254,18 @@
                 </div>
             </section>
             <section id="interests" class="content-section">
-                <h3 class="content-section__section-heading">Interests</h3>
-                <p class="content-section__content">Urban Farming, Rock Climbing, Tabletop Gaming</p>
+                <h3 class="content-section__section-heading">Extracurriculars</h3>
+                <div class="content-section__content">
+                    <p class="content-section__content">
+                        <span class="content-section__topic-heading">Hack Night Lead</span>
+                        &bull; OpenOakland</p>
+                    <p class="content-section__content">
+                        <span class="content-section__topic-heading">Winner, Collaboration and Team Spirit</span>
+                        &bull; CA Water Data Challenge</p>
+                    <p class="content-section__content">
+                        <span class="content-section__topic-heading">Finalist</span>
+                        &bull; JamStack Hackathon</p>
+                </div>
             </section>
         </div>
     </main>
