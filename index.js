@@ -7,6 +7,9 @@ const watch = require('metalsmith-watch')
 
 const args = process.argv.slice(2)
 
+/**
+ * takes the `watch` command line arg to run the watcher
+ */
 metalsmith(__dirname)
     .metadata({
         siteUrl: "http://ckingbailey.com",
