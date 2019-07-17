@@ -14,5 +14,8 @@ php.ini
 php_error.log
 config.php
 
+# don't version control local enviornment setup
+.vscode
+
 _old*
 _dev*

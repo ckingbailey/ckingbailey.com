@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node index",
     "postinstall": "npm run build",
-    "watch": "node index watch",
+    "start": "node index watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
