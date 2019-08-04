@@ -26,6 +26,55 @@ skills:
         - MySQL
         - AWS
         - GCP
+
+experience:
+    - company: Freelance
+      position: Software Developer
+      start_date: 2019
+      end_date: present
+      tasks:
+        - Develop web application for government and private business customers
+        - Build custom apps from the ground up, and add new features to existing codebases
+    - company: CoProcure
+      position: Software Engineering Intern
+      date: Summer 2019
+      tasks:
+        - Automate data ingestion from diverse government website scrapers
+        - Design and implement human data entry workflow for management of data entry contractors
+        - Write end-to-end tests with Mocha, Chai, Puppeteer
+    - company: VTA/BART
+      position: Senior Web Developer, Contract
+      start_date: March 2018
+      end_date: present
+      tasks:
+        - Expose critical construction deficiencies with a portable web interface and database tracking completion work on BART extension to San Jose
+        - Engage 2x more field contractors by making app mobile-responsive
+        - Cut time to complete interaction by a third with interacive JavaScript Components
+        - Thwart hackers by auditing and fixing SQL and authentication vulnerabilities
+
+projects:
+    - name: OUSD Kinder Transitions App
+      tech:
+        - Google Apps Script
+      short_description: Kinder promotion automation
+      long_description: In collaboration with OUSD Data Fellow, created automated workflow to track and transfer information about students promoted from pre-k to kinder program
+    - name: Confidential Finance App
+      tech:
+        - React
+        - Express
+        - MySQL
+      short_description: Equity recommendations and fund analytics
+      long_description: Built MERN stack app with remote partner using customer's stock analysis algorithm
+
+education:
+    - institution: San Jose State University
+      degree: BFA, Pictorial Art
+
+extra:
+    - event: OpenOakland
+      activity: Hack Night Lead
+    - event: CA Water Data Hackathon 2018
+      activity: Winner, Collaboration and Team Spirit Award
 ---
 <!DOCTYPE html>
 <html>
@@ -238,82 +287,60 @@ skills:
             </section>
             <section id="experience" class="content-section">
                 <h3 class="content-section__section-heading">Experience</h3>
+                {% for exp in experience -%}
                 <div class="content-section__content">
                     <div class="content-section__topic">
-                        <span class="content-section__topic-heading">Freelance</span> &bull; Software Developer
-                        <h5 class="content-section__sub-title">2019 - present</h5>
+                        <span class="content-section__topic-heading">{{ exp.company }}</span>
+                        <span>&bull; {{ exp.position }}</span>
+                        <h5 class="content-section__sub-title">
+                        {% if exp.start_date -%}
+                            {{ exp.start_date }} - {{ exp.end_date if exp.end_date else "present" }}
+                        {%- endif %}
+                        </h5>
                     </div>
                     <ul>
-                        <li>Develop software solutions for government and private business customers</li>
-                        <li>Build custom apps from the ground up, and add new features to existing codebases</li>
+                        {% for task in exp.tasks -%}
+                        <li>{{ task }}</li>
+                        {%- endfor %}
                     </ul>
                 </div>
-                <div class="content-section__content">
-                    <div class="content-section__topic">
-                        <span class="content-section__topic-heading">CoProcure</span> &bull; Software Engineering Intern
-                        <h5 class="content-section__sub-title">Summer 2019</h5>
-                    </div>
-                    <ul>
-                        <li>Automate data ingestion from diverse government website scrapers</li>
-                        <li>Design and implement dashboard for management of data entry contractors' contributions</li>
-                    </ul>
-                </div>
-                <div class="content-section__content">
-                    <div class="content-section__topic">
-                        <span class="content-section__topic-heading">VTA/BART</span> &bull; Senior Web Developer, Contract
-                        <h5 class="content-section__sub-title">March 2018 - present</h5>
-                    </div>
-                    <ul>
-                        <li>Expose critical construction deficiencies using a portable web interface and database tracking completion work on  civic infrastructure projects</li>
-                        <li>Engage 2x more contractors by making app mobile-responsive</li>
-                        <li>Cut time to complete interactions by a third with interactive JavaScript components</li>
-                        <li>Thwart hackers by auditing and fixing SQL and authentication vulnerabilities</li>
-                    </ul>
-                </div>
+                {%- endfor %}
             </section>
             <section id="projects" class="content-section">
                 <h3 class="content-section__section-heading">Projects</h3>
+                {% for proj in projects -%}
                 <div class="content-section__content">
                     <p class="content-section__topic">
-                        <span class="content-section__topic-heading">OUSD Kinder Transitions App</span>
-                        &bull; Google Apps Script
+                        <span class="content-section__topic-heading">{{ proj.name }}</span>
+                        {% set comma = joiner() %}
+                        <span>&bull; {% for tech in proj.tech -%}{{ comma() }} {{ tech }}{%- endfor %}</span>
                     </p>
                     <div class="content-section__content">
-                        <h5 class="content-section__sub-title">Kinder promotion automation</h5>
-                        <p>In collaboration with OUSD Data Fellow, created automated workflow to track and transfer information about students promoted from pre-k to kinder program</p>
+                        <h5 class="content-section__sub-title">{{ proj.short_description }}</h5>
+                        <p>{{ proj.long_description }}</p>
                     </div>
                 </div>
-                <div class="content-section__content">
-                    <p class="content-section__topic">
-                        <span class="content-section__topic-heading">Confidential Finance App</span>
-                        &bull; React, Express, MySQL
-                    </p>
-                    <div class="content-section__content">
-                        <h5 class="content-section__sub-title">Equity recommendations and fund analytics</h5>
-                        <p>Built MERN stack app with remote partner using customer's stock analysis algorithm</p>
-                    </div>
-                </div>
+                {%- endfor %}
             </section>
             <section id="education" class="content-section">
                 <h3 class="content-section__section-heading">Education</h3>
                 <div class="content-section__content">
+                    {% for ed in education -%}
                     <p class="content-section__topic">
-                        <span class="content-section__topic-heading">BFA, Pictorial Art</span> &bull; San Jose State University
+                        <span class="content-section__topic-heading">{{ ed.degree }}</span> &bull; {{ ed.institution}}
                     </p>
+                    {%- endfor %}
                 </div>
             </section>
             <section id="interests" class="content-section">
                 <h3 class="content-section__section-heading">Awards and Volunteer Work</h3>
+                {% for ex in extra -%}
                 <div class="content-section__content">
                     <p class="content-section__topic">
-                        <span class="content-section__topic-heading">Hack Night Lead</span> &bull; OpenOakland
+                        <span class="content-section__topic-heading">{{ ex.activity }}</span> &bull; {{ ex.event }}
                     </p>
                 </div>
-                <div class="content-section__content">
-                    <p class="content-section__topic">
-                        <span class="content-section__topic-heading">Winner, Collaboration and Team Spirit Award</span> &bull; CA Water Data Hackathon 2018
-                    </p>
-                </div>
+                {%- endfor %}
             </section>
         </div>
     </main>
