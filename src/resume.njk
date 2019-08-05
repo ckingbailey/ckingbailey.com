@@ -1,3 +1,81 @@
+---
+name: Colin King-Bailey
+title: Software Developer
+
+contact:
+    email: ckingbailey@gmail.com
+    github: github.com/ckingbailey
+    linkedin: linkedin.com/in/ckingbailey
+
+skills:
+    frontend:
+        - JavaScript (ES2015+)
+        - React + JSX
+        - Jekyll
+        - D3
+        - JQuery
+        - CSS3
+        - Sass
+        - HTML
+    backend:
+        - Node
+        - Express
+        - Mongoose/MongoDB
+        - PHP 7
+        - Symfony
+        - MySQL
+        - AWS
+        - GCP
+
+experience:
+    - company: Freelance
+      position: Software Developer
+      start_date: 2019
+      end_date: present
+      tasks:
+        - Develop web application for government and private business customers
+        - Build custom apps from the ground up, and add new features to existing codebases
+    - company: CoProcure
+      position: Software Engineering Intern
+      date: Summer 2019
+      tasks:
+        - Automate data ingestion from diverse government website scrapers
+        - Design and implement human data entry workflow and dashboard for management of data entry contractors
+        - Write end-to-end tests with Mocha, Chai, Puppeteer
+    - company: VTA/BART
+      position: Senior Web Developer, Contract
+      start_date: March 2018
+      end_date: present
+      tasks:
+        - Expose critical construction deficiencies with a portable web interface and database tracking completion work on BART extension to San Jose
+        - Engage 2x more field contractors by making app mobile-responsive
+        - Cut time to complete interactions by a third with dynamic JavaScript components
+        - Thwart hackers by auditing and fixing SQL and authentication vulnerabilities
+
+projects:
+    - name: OUSD Kinder Transitions App
+      tech:
+        - Google Apps Script
+      short_description: Kinder promotion automation
+      long_description: In collaboration with OUSD Data Fellow, created automated workflow to track and transfer information about students promoted from pre-k to kinder program
+    - name: Confidential Finance App
+      tech:
+        - React
+        - Express
+        - MySQL
+      short_description: Equity recommendations and fund analytics
+      long_description: Built MERN stack app with remote partner using customer's stock analysis algorithm
+
+education:
+    - institution: San Jose State University
+      degree: BFA, Pictorial Art
+
+extra:
+    - event: OpenOakland
+      activity: Hack Night Lead
+    - event: CA Water Data Hackathon 2018
+      activity: Winner, Collaboration and Team Spirit Award
+---
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,14 +112,14 @@
         }
         h1, h2, h3, h4, h5, h6, address, p {
             margin-top: 0;
-            margin-bottom: .5rem;
+            margin-bottom: 0;
         }
         h1, h2, h3, h4, h5, h6 {
             font-weight: normal;
             font-family: var(--heading-font);
         }
         ul {
-            margin-top: 0;
+            margin: 0;
             padding-left: 1.25rem;
             list-style-type: none;
         }
@@ -86,6 +164,11 @@
         .header, .content-section__content {
             padding-left: .65rem; padding-right: .65rem;
         }
+        .header,
+        .content-section__content:last-child,
+        .content-section__section-heading {
+            margin-bottom: 0.5rem;
+        }
         .personal-information__title, .content-section__sub-title {
             color: var(--dark-grey);
         }
@@ -99,7 +182,7 @@
             text-align: left;
         }
         .content-section__section-heading {
-            padding-top: .5rem; padding-bottom: .65rem;
+            padding-top: .3rem; padding-bottom: .35rem;
             padding-left: 20px; padding-right: .65rem;
             background-color: var(--lt-grey);
             /* background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="50" width="15"><polygon points="0 0, 15 0, 0 50" fill="white" /></svg>'); */
@@ -109,11 +192,12 @@
             background-size: 20px 102%;
             background-repeat: no-repeat;
             text-align: left;
+            font-size: 1.15rem;
             line-height: 1.2;
             color: var(--near-black);
         }
         .content-section__content, .content-section__sub-title, .personal-information__contact-info {
-            font-size: .85rem;
+            font-size: .9rem;
         }
         .content-section__sub-title {
             font-family: var(--base-font);
@@ -123,7 +207,7 @@
             padding-left: .325rem;
         }
         .content-section__topic-heading {
-            font-size: 1rem;
+            font-size: .9rem;
             font-family: var(--heading-font);
         }
         .text-grey {
@@ -158,7 +242,7 @@
         }
         @media print {
             .resume {
-                padding: .25in;
+                padding: 0;
             }
             a {
                 color: var(--dark-blue);
@@ -171,13 +255,13 @@
         <div id="resume" class="resume">
             <header class="header">
                 <div class="personal-information">
-                    <h1 id="name" class="personal-information__name">Colin King-Bailey</h1>
-                    <h3 id="title" class="personal-information__title">Software Developer</h3>
+                    <h1 id="name" class="personal-information__name">{{ name }}</h1>
+                    <h3 id="title" class="personal-information__title">{{ title }}</h3>
                 </div>
                 <address id="contact_information" class="personal-information__contact-info">
-                    <a href="mailto:ckingbailey@gmail.com" class="personal-information__contact-info-link">ckingbailey@gmail.com</a>
-                    <a href="https://github.com/ckingbailey" class="personal-information__contact-info-link">github.com/ckingbailey</a>
-                    <a href="https://www.linkedin.com/in/ckingbailey" class="personal-information__contact-info-link">linkedin.com/in/ckingbailey</a>
+                    <a href="mailto:ckingbailey@gmail.com" class="personal-information__contact-info-link">{{ contact.email }}</a>
+                    <a href="https://github.com/ckingbailey" class="personal-information__contact-info-link">{{ contact.github }}</a>
+                    <a href="https://www.linkedin.com/in/ckingbailey" class="personal-information__contact-info-link">{{ contact.linkedin }}</a>
                 </address>
             </header>
             <section id="skills" class="content-section">
@@ -185,86 +269,78 @@
                 <div class="content-section__content">
                     <p class="content-section__topic">
                         <span class="content-section__topic-heading">Front end:</span>
-                        JavaScript (ES2015+), React + JSX, Jekyll, D3, JQuery, CSS3, Sass, HTML, Twig
+                        {% set comma = joiner() %}
+                        {% for skill in skills.frontend -%}
+                            {{ comma() }} {{ skill }}
+                        {%- endfor %}
                     </p>
                 </div>
                 <div class="content-section__content">
                     <p class="content-section__topic">
                         <span class="content-section__topic-heading">Back end:</span>
-                        Node, Express, Mongoose/MongoDB, PHP 7, Symfony, MySQL, AWS, GCP
+                        {% set comma = joiner() %}
+                        {% for skill in skills.backend -%}
+                            {{ comma() }} {{ skill }}
+                        {%- endfor %}
                     </p>
                 </div>
             </section>
             <section id="experience" class="content-section">
                 <h3 class="content-section__section-heading">Experience</h3>
+                {% for exp in experience -%}
                 <div class="content-section__content">
                     <div class="content-section__topic">
-                        <span class="content-section__topic-heading">Self-employed</span>
-                        &bull; Software Developer
-                        <h5 class="content-section__sub-title">2019 - present</h5>
+                        <span class="content-section__topic-heading">{{ exp.company }}</span>
+                        <span>&bull; {{ exp.position }}</span>
+                        <h5 class="content-section__sub-title">
+                        {% if exp.start_date -%}
+                            {{ exp.start_date }} - {{ exp.end_date if exp.end_date else "present" }}
+                        {%- endif %}
+                        </h5>
                     </div>
                     <ul>
-                        <li>Develop software solutions for government and private business customers</li>
-                        <li>Build custom apps from the ground up, and add new features to existing codebases</li>
+                        {% for task in exp.tasks -%}
+                        <li>{{ task }}</li>
+                        {%- endfor %}
                     </ul>
                 </div>
-                <div class="content-section__content">
-                    <div class="content-section__topic">
-                        <span class="content-section__topic-heading">VTA-BART</span>
-                        &bull; Web Developer, Contract
-                        <h5 class="content-section__sub-title">2018 - 2019</h5>
-                    </div>
-                    <ul>
-                        <li>Expose critical construction deficiencies using a portable web interface and database tracking completion work on  civic infrastructure projects</li>
-                        <li>Engage 2x more contractors by making app mobile-responsive</li>
-                        <li>Cut time to complete interactions by a third with interactive JavaScript components</li>
-                        <li>Squash bug reports by 90% with politer exception handling</li>
-                        <li>Thwart hackers by auditing and fixing SQL and authentication vulnerabilities</li>
-                    </ul>
-                </div>
+                {%- endfor %}
             </section>
             <section id="projects" class="content-section">
                 <h3 class="content-section__section-heading">Projects</h3>
+                {% for proj in projects -%}
                 <div class="content-section__content">
                     <p class="content-section__topic">
-                        <span class="content-section__topic-heading">Open Disclosure</span>
-                        &bull; Jekyll, React, Ruby
+                        <span class="content-section__topic-heading">{{ proj.name }}</span>
+                        {% set comma = joiner() %}
+                        <span>&bull; {% for tech in proj.tech -%}{{ comma() }} {{ tech }}{%- endfor %}</span>
                     </p>
                     <div class="content-section__content">
-                        <h5 class="content-section__sub-title">Campaign finance app &bull; http://www.opendisclosure.io/</h5>
-                        <p>Resolved issues with displayed data, implemented Invision design</p>
+                        <h5 class="content-section__sub-title">{{ proj.short_description }}</h5>
+                        <p>{{ proj.long_description }}</p>
                     </div>
                 </div>
-                <div class="content-section__content">
-                    <p class="content-section__topic">
-                        <span class="content-section__topic-heading">Confidential Finance App</span>
-                        &bull; React, Express, MySQL
-                    </p>
-                    <div class="content-section__content">
-                        <h5 class="content-section__sub-title">Equity recommendations and fund analytics</h5>
-                        <p>Built MERN stack app with remote partner using customer's stock analysis algorithm</p>
-                    </div>
-                </div>
+                {%- endfor %}
             </section>
             <section id="education" class="content-section">
                 <h3 class="content-section__section-heading">Education</h3>
                 <div class="content-section__content">
+                    {% for ed in education -%}
                     <p class="content-section__topic">
-                        <span class="content-section__topic-heading">BFA, Pictorial Art</span>
-                        &bull; San Jose State University
+                        <span class="content-section__topic-heading">{{ ed.degree }}</span> &bull; {{ ed.institution}}
                     </p>
+                    {%- endfor %}
                 </div>
             </section>
             <section id="interests" class="content-section">
-                <h3 class="content-section__section-heading">Extracurriculars</h3>
+                <h3 class="content-section__section-heading">Awards and Volunteer Work</h3>
+                {% for ex in extra -%}
                 <div class="content-section__content">
-                    <p class="content-section__content">
-                        <span class="content-section__topic-heading">Hack Night Lead</span>
-                        &bull; OpenOakland</p>
-                    <p class="content-section__content">
-                        <span class="content-section__topic-heading">Winner, Collaboration and Team Spirit</span>
-                        &bull; CA Water Data Challenge</p>
+                    <p class="content-section__topic">
+                        <span class="content-section__topic-heading">{{ ex.activity }}</span> &bull; {{ ex.event }}
+                    </p>
                 </div>
+                {%- endfor %}
             </section>
         </div>
     </main>
