@@ -33,7 +33,7 @@ experience:
       start_date: 2019
       end_date: present
       tasks:
-        - Develop web application for government and private business customers
+        - Develop web applications for government and private business customers
         - Build custom apps from the ground up, and add new features to existing codebases
     - company: CoProcure
       position: Software Engineering Intern
@@ -47,7 +47,7 @@ experience:
       start_date: March 2018
       end_date: present
       tasks:
-        - Expose critical construction deficiencies with a portable web interface and database tracking completion work on BART extension to San Jose
+        - Expose critical construction deficiencies with a portable web interface and database tracking finishing work on BART extension to San Jose
         - Engage 2x more field contractors by making app mobile-responsive
         - Cut time to complete interactions by a third with dynamic JavaScript components
         - Thwart hackers by auditing and fixing SQL and authentication vulnerabilities
@@ -64,7 +64,7 @@ projects:
         - Express
         - MySQL
       short_description: Equity recommendations and fund analytics
-      long_description: Built MERN stack app with remote partner using customer's stock analysis algorithm
+      long_description: Built MERN stack app with remote partner using customer's stock analysis algorithms
 
 education:
     - institution: San Jose State University
@@ -295,6 +295,8 @@ extra:
                         <h5 class="content-section__sub-title">
                         {% if exp.start_date -%}
                             {{ exp.start_date }} - {{ exp.end_date if exp.end_date else "present" }}
+                        {% elif exp.date -%}
+                            {{ exp.date }}
                         {%- endif %}
                         </h5>
                     </div>
