@@ -30,11 +30,18 @@ skills:
 experience:
     - company: Freelance
       position: Software Developer
-      start_date: 2019
+      start_date: March 2018
       end_date: present
       tasks:
-        - Develop web applications for government and private business customers
-        - Build custom apps from the ground up, and add new features to existing codebases
+        - project: VTA/BART
+          short_description: QA tool for end phase of BART construction to South Bay
+          tech: LAMP stack with custom JavaScript components
+        - project: Confidential Finance App
+          short_description: Equity recommendations and fund analytics
+          tech: React, Express, MySQL
+        - project: OUSD Kinder Transitions
+          short_description: Kinder promotion automation
+          tech: Google Apps Script
     - company: CoProcure
       position: Software Engineering Intern
       date: Summer 2019
@@ -42,15 +49,6 @@ experience:
         - Automate data ingestion from diverse government website scrapers
         - Design and implement human data entry workflow and dashboard for management of data entry contractors
         - Write end-to-end tests with Mocha, Chai, Puppeteer
-    - company: VTA/BART
-      position: Senior Web Developer, Contract
-      start_date: March 2018
-      end_date: present
-      tasks:
-        - Expose critical construction deficiencies with a portable web interface and database tracking finishing work on BART extension to San Jose
-        - Engage 2x more field contractors by making app mobile-responsive
-        - Cut time to complete interactions by a third with dynamic JavaScript components
-        - Thwart hackers by auditing and fixing SQL and authentication vulnerabilities
 
 projects:
     - name: OUSD Kinder Transitions App
@@ -302,7 +300,12 @@ extra:
                     </div>
                     <ul>
                         {% for task in exp.tasks -%}
+                        {% if task.project %}
+                        <li>{{ task.project }}: {{ task.short_description }}
+                        <br>{{ task.tech }}</li>
+                        {% else%}
                         <li>{{ task }}</li>
+                        {% endif %}
                         {%- endfor %}
                     </ul>
                 </div>
