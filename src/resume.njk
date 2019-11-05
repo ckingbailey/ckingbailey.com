@@ -35,7 +35,7 @@ experience:
       tasks:
         - project: VTA/BART
           short_description: Infrastructure construction QA tool
-          long_description: Expose critical construction deficiencies with a mobile-responsive web application tracking finishing work on BART construction to the South Bay
+          long_description: Expose critical construction deficiencies with a mobile-responsive web application tracking integration testing on new BART construction to the South Bay
           tech: 
             - PHP
             - MySQL
@@ -49,16 +49,19 @@ experience:
             - MySQL
         - project: OUSD Kinder Transitions
           short_description: Kinder promotion automation
-          long_description: In collaboration with OUSD Data Fellow, automate workflow to track and transfer data for students promoted from pre-k to kinder programs
+          long_description: >-
+            Ease the pre-k-to-kinder transition of 400 students, and counting, by automating workflows and inter-teacher communication.
+            Gaining more adoption every year, this year the transition web tools will be used by Head Start Oakland in addition to OUSD's Early Learning Lab.
           tech:
             - Google Apps Script
     - company: CoProcure
       position: Software Engineering Intern
       date: Summer 2019
       tasks:
-        - Automate data ingestion from diverse government website scrapers
-        - Design and implement human data entry workflow and dashboard for management of data entry contractors
-        - Write end-to-end tests with Mocha, Chai, Puppeteer
+        - Take the guess work out of contractors' code contributions by recommending standardized patterns
+        - Save on human labor in ingesting new data sources by automating diverse government website scrapers
+        - Double the number of sources ingested by creating data entry workflow and dashboard for management of data entry contractors
+        - Ensure the systems I built are bullet-proof with unit tests in Tape and end-to-end tests in Mocha, Chai, Puppeteer
 
 projects:
     - name: Open Disclosure
@@ -67,7 +70,7 @@ projects:
         - Ruby
         - React
       short_description: Oakland campaign finance website
-      long_description: Track where the money comes from in local Oakland elections
+      long_description: Increase voter engagement by making it easy to find out where the money comes from in local Oakland elections
     - name: D.A.M.S.S
       tech:
         - React
@@ -84,6 +87,8 @@ extra:
       activity: Hack Night Lead
     - event: CA Water Data Hackathon 2018
       activity: Winner, Collaboration and Team Spirit Award
+    - event: East Bay FreeCodeCamp Meetup
+      activity: Organizer, 2017-2018
 ---
 <!DOCTYPE html>
 <html>
@@ -248,6 +253,8 @@ extra:
                 height: 10px;
                 background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="10" height="10"><polygon points="3 3, 7 3, 7 7, 3 7" fill="none" stroke-width="1" stroke="%23333" /></svg>');
             }
+        }
+        @media screen {
         }
         @media print {
             .resume {
