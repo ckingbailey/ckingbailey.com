@@ -26,6 +26,13 @@ skills:
         - MySQL
         - AWS
         - GCP
+    other:
+        - Git
+        - Agile
+        - TDD/BDD
+        - Jest
+        - Tape
+        - Mocha/Chai/Sinon
 
 experience:
     - company: Freelance
@@ -296,6 +303,15 @@ extra:
                         <span class="content-section__topic-heading">Back end:</span>
                         {% set comma = joiner() %}
                         {% for skill in skills.backend -%}
+                            {{ comma() }} {{ skill }}
+                        {%- endfor %}
+                    </p>
+                </div>
+                <div class="content-section__content">
+                    <p class="content-section__topic">
+                        <span class="content-section__topic-heading">Other:</span>
+                        {% set comma = joiner() %}
+                        {% for skill in skills.other -%}
                             {{ comma() }} {{ skill }}
                         {%- endfor %}
                     </p>
