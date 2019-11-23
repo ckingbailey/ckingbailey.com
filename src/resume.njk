@@ -6,33 +6,32 @@ contact:
     email: ckingbailey@gmail.com
     github: github.com/ckingbailey
     linkedin: linkedin.com/in/ckingbailey
-
 skills:
-    frontend:
+    - heading: Proficient
+      list:
         - JavaScript (ES2015+)
-        - React + JSX
-        - Jekyll
-        - D3
-        - JQuery
-        - CSS3
-        - Sass
-        - HTML
-    backend:
+        - Git
         - Node
         - Express
-        - Mongoose/MongoDB
+        - CSS3
         - PHP 7
-        - Symfony
         - MySQL
         - AWS
-        - GCP
-    other:
-        - Git
-        - Agile
-        - TDD/BDD
+        - HTML
         - Jest
-        - Tape
+    - heading: Comfortable
+      list:
+        - React/Redux
+        - D3
+        - JQuery
+        - Jekyll
+        - Sass
+        - Mongoose/MongoDB
+        - Symfony/Twig
+        - TDD/BDD
         - Mocha/Chai/Sinon
+        - Tape
+        - GCP
 
 experience:
     - company: Freelance
@@ -41,8 +40,9 @@ experience:
       end_date: present
       tasks:
         - project: VTA/BART
-          short_description: Infrastructure construction QA tool
-          long_description: Expose critical construction deficiencies with a mobile-responsive web application tracking integration testing on new BART construction to the South Bay
+          long_description: >
+            Expedite and create auditable paper trail for finishing phase of construction of BART extension to San Jose
+            with a mobile-responsive web application written in PHP, MySQL, Bootstrap, DOM APIs
           tech: 
             - PHP
             - MySQL
@@ -203,15 +203,9 @@ extra:
             text-align: left;
         }
         .content-section__section-heading {
-            padding-top: .3rem; padding-bottom: .35rem;
-            padding-left: 20px; padding-right: .65rem;
-            background-color: var(--lt-grey);
-            /* background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="50" width="15"><polygon points="0 0, 15 0, 0 50" fill="white" /></svg>'); */
-            background-image: linear-gradient(-75deg, var(--lt-grey) 0%, var(--lt-grey) 50%, white 50%, white 100%);
-            background-origin: border-box;
-            background-position: 0 0;
-            background-size: 20px 102%;
-            background-repeat: no-repeat;
+            border-bottom: 2px solid black;
+            padding-bottom: .15rem;
+            padding-right: .65rem;
             text-align: left;
             font-size: 1.15rem;
             line-height: 1.2;
@@ -289,7 +283,18 @@ extra:
             </header>
             <section id="skills" class="content-section">
                 <h3 class="content-section__section-heading">Skills</h3>
+                {% for group in skills %}
                 <div class="content-section__content">
+                    <p class="content-section__topic">
+                        <span class="content-section__topic-heading">{{ group.heading }}: </span>
+                        {% set comma = joiner() %}
+                        {% for skill in group.list -%}
+                            {{ comma() }} {{ skill }}
+                        {%- endfor %}
+                    </p>
+                </div>
+                {%- endfor %}
+                {# <div class="content-section__content">
                     <p class="content-section__topic">
                         <span class="content-section__topic-heading">Front end:</span>
                         {% set comma = joiner() %}
@@ -315,7 +320,7 @@ extra:
                             {{ comma() }} {{ skill }}
                         {%- endfor %}
                     </p>
-                </div>
+                </div> #}
             </section>
             <section id="experience" class="content-section">
                 <h3 class="content-section__section-heading">Experience</h3>
@@ -339,7 +344,9 @@ extra:
                             {% set comma = joiner() %}
                             <span>{{ task.project }}</span>
                             <span>&bull; {% for tech in task.tech -%}{{ comma() }} {{ tech }}{%- endfor %}</span>
+                            {% if task.short_description %}
                             <br><span class="content-section__sub-title">{{ task.short_description }}</span>
+                            {% endif %}
                             <br><span>{{task.long_description}}</span></li>
                         {% else%}
                         <li>{{ task }}</li>
