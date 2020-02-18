@@ -10,15 +10,14 @@ skills:
     - heading: Proficient
       list:
         - JavaScript (ES2015+)
-        - Git
+        - HTML
+        - CSS3
         - Node
         - Express
-        - CSS3
         - PHP 7
         - MySQL
-        - AWS
-        - HTML
         - Jest
+        - Git
     - heading: Comfortable
       list:
         - React/Redux
@@ -26,20 +25,21 @@ skills:
         - JQuery
         - Jekyll
         - Sass
-        - Mongoose/MongoDB
         - Symfony/Twig
+        - AWS
+        - GCP
         - TDD/BDD
         - Mocha/Chai/Sinon
         - Tape
-        - GCP
 
 experience:
-    - company: Freelance
+    - company: CKB Software Solutions
       position: Software Developer
       start_date: March 2018
       end_date: present
       tasks:
-        - project: VTA/BART
+        - project: Silicon Valley BART Extension
+          short_description: Infrastructure construction issue tracking tool
           long_description: >
             Expedite and create auditable paper trail for finishing phase of construction of BART extension to San Jose
             with a mobile-responsive web application written in PHP, MySQL, Bootstrap, DOM APIs
@@ -47,7 +47,7 @@ experience:
             - PHP
             - MySQL
             - JavaScript
-        - project: Confidential Finance App
+        - project: Denbigh Capital
           short_description: Equity recommendations and fund analytics
           long_description: Improve investment performance of family office by visualizing stock market analyses
           tech:
@@ -144,14 +144,8 @@ extra:
             padding-left: 1.25rem;
             list-style-type: none;
         }
-        li::before {
-            content: '';
-            display: inline-block;
-            margin-left: calc(-1 * (6px + .45rem));
-            margin-right: .45rem;
-            width: 6px; height: 10px;
-            background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="6" height="10"><polygon points="0 2, 6 5, 0 8" fill="%23333"/></svg>');
-            background-repeat: no-repeat;
+        li::marker {
+            content: '\25b8\a0\a0';
         }
         a {
             text-decoration: none;
@@ -294,33 +288,6 @@ extra:
                     </p>
                 </div>
                 {%- endfor %}
-                {# <div class="content-section__content">
-                    <p class="content-section__topic">
-                        <span class="content-section__topic-heading">Front end:</span>
-                        {% set comma = joiner() %}
-                        {% for skill in skills.frontend -%}
-                            {{ comma() }} {{ skill }}
-                        {%- endfor %}
-                    </p>
-                </div>
-                <div class="content-section__content">
-                    <p class="content-section__topic">
-                        <span class="content-section__topic-heading">Back end:</span>
-                        {% set comma = joiner() %}
-                        {% for skill in skills.backend -%}
-                            {{ comma() }} {{ skill }}
-                        {%- endfor %}
-                    </p>
-                </div>
-                <div class="content-section__content">
-                    <p class="content-section__topic">
-                        <span class="content-section__topic-heading">Other:</span>
-                        {% set comma = joiner() %}
-                        {% for skill in skills.other -%}
-                            {{ comma() }} {{ skill }}
-                        {%- endfor %}
-                    </p>
-                </div> #}
             </section>
             <section id="experience" class="content-section">
                 <h3 class="content-section__section-heading">Experience</h3>
