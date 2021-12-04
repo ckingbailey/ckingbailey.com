@@ -6,65 +6,84 @@ contact:
     email: ckingbailey@gmail.com
     github: github.com/ckingbailey
     linkedin: linkedin.com/in/ckingbailey
-
 skills:
-    frontend:
+    - heading: Proficient
+      list:
         - JavaScript (ES2015+)
-        - React + JSX
-        - Jekyll
-        - D3
-        - JQuery
-        - CSS3
-        - Sass
         - HTML
-    backend:
+        - CSS3
         - Node
         - Express
-        - Mongoose/MongoDB
         - PHP 7
-        - Symfony
         - MySQL
+        - Jest
+        - Git
+    - heading: Comfortable
+      list:
+        - React/Redux
+        - D3
+        - JQuery
+        - Jekyll
+        - Sass
+        - Symfony/Twig
         - AWS
         - GCP
+        - TDD/BDD
+        - Mocha/Chai/Sinon
+        - Tape
 
 experience:
-    - company: Freelance
+    - company: CKB Software Solutions
       position: Software Developer
-      start_date: 2019
+      start_date: March 2018
       end_date: present
       tasks:
-        - Develop web application for government and private business customers
-        - Build custom apps from the ground up, and add new features to existing codebases
+        - project: Silicon Valley BART Extension
+          short_description: Infrastructure construction issue tracking tool
+          long_description: >
+            Expedite and create auditable paper trail for finishing phase of construction of BART extension to San Jose
+            with a mobile-responsive web application written in PHP, MySQL, Bootstrap, DOM APIs
+          tech: 
+            - PHP
+            - MySQL
+            - JavaScript
+        - project: Denbigh Capital
+          short_description: Equity recommendations and fund analytics
+          long_description: Improve investment performance of family office by visualizing stock market analyses
+          tech:
+            - React
+            - Express
+            - MySQL
+        - project: OUSD Kinder Transitions
+          short_description: Kinder promotion automation
+          long_description: >-
+            Ease the pre-k-to-kinder transition of 400 students, and counting, by automating workflows and inter-teacher communication.
+            Gaining more adoption every year, this year the transition web tools will be used by Head Start Oakland in addition to OUSD's Early Learning Lab.
+          tech:
+            - Google Apps Script
     - company: CoProcure
       position: Software Engineering Intern
       date: Summer 2019
       tasks:
-        - Automate data ingestion from diverse government website scrapers
-        - Design and implement human data entry workflow and dashboard for management of data entry contractors
-        - Write end-to-end tests with Mocha, Chai, Puppeteer
-    - company: VTA/BART
-      position: Senior Web Developer, Contract
-      start_date: March 2018
-      end_date: present
-      tasks:
-        - Expose critical construction deficiencies with a portable web interface and database tracking completion work on BART extension to San Jose
-        - Engage 2x more field contractors by making app mobile-responsive
-        - Cut time to complete interactions by a third with dynamic JavaScript components
-        - Thwart hackers by auditing and fixing SQL and authentication vulnerabilities
+        - Take the guess work out of contractors' code contributions by recommending standardized patterns
+        - Save on human labor in ingesting new data sources by automating diverse government website scrapers
+        - Double the number of sources ingested by creating data entry workflow and dashboard for management of data entry contractors
+        - Ensure the systems I built are bullet-proof with unit tests in Tape and end-to-end tests in Mocha, Chai, Puppeteer
 
 projects:
-    - name: OUSD Kinder Transitions App
+    - name: Open Disclosure
       tech:
-        - Google Apps Script
-      short_description: Kinder promotion automation
-      long_description: In collaboration with OUSD Data Fellow, created automated workflow to track and transfer information about students promoted from pre-k to kinder program
-    - name: Confidential Finance App
+        - Jekyll
+        - Ruby
+        - React
+      short_description: Oakland campaign finance website
+      long_description: Increase voter engagement by making it easy to find out where the money comes from in local Oakland elections
+    - name: D.A.M.S.S
       tech:
         - React
-        - Express
-        - MySQL
-      short_description: Equity recommendations and fund analytics
-      long_description: Built MERN stack app with remote partner using customer's stock analysis algorithm
+        - ArcGIS
+      short_description: Dams Assessment Mapping Safety System
+      long_description: Empower citizens to do something about dams in their area that do not meet maintanence standards
 
 education:
     - institution: San Jose State University
@@ -75,6 +94,8 @@ extra:
       activity: Hack Night Lead
     - event: CA Water Data Hackathon 2018
       activity: Winner, Collaboration and Team Spirit Award
+    - event: East Bay FreeCodeCamp Meetup
+      activity: Organizer, 2017-2018
 ---
 <!DOCTYPE html>
 <html>
@@ -123,14 +144,8 @@ extra:
             padding-left: 1.25rem;
             list-style-type: none;
         }
-        li::before {
-            content: '';
-            display: inline-block;
-            margin-left: calc(-1 * (6px + .45rem));
-            margin-right: .45rem;
-            width: 6px; height: 10px;
-            background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="6" height="10"><polygon points="0 2, 6 5, 0 8" fill="%23333"/></svg>');
-            background-repeat: no-repeat;
+        li::marker {
+            content: '\25b8\a0\a0';
         }
         a {
             text-decoration: none;
@@ -182,15 +197,9 @@ extra:
             text-align: left;
         }
         .content-section__section-heading {
-            padding-top: .3rem; padding-bottom: .35rem;
-            padding-left: 20px; padding-right: .65rem;
-            background-color: var(--lt-grey);
-            /* background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="50" width="15"><polygon points="0 0, 15 0, 0 50" fill="white" /></svg>'); */
-            background-image: linear-gradient(-75deg, var(--lt-grey) 0%, var(--lt-grey) 50%, white 50%, white 100%);
-            background-origin: border-box;
-            background-position: 0 0;
-            background-size: 20px 102%;
-            background-repeat: no-repeat;
+            border-bottom: 2px solid black;
+            padding-bottom: .15rem;
+            padding-right: .65rem;
             text-align: left;
             font-size: 1.15rem;
             line-height: 1.2;
@@ -240,6 +249,8 @@ extra:
                 background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="10" height="10"><polygon points="3 3, 7 3, 7 7, 3 7" fill="none" stroke-width="1" stroke="%23333" /></svg>');
             }
         }
+        @media screen {
+        }
         @media print {
             .resume {
                 padding: 0;
@@ -266,24 +277,17 @@ extra:
             </header>
             <section id="skills" class="content-section">
                 <h3 class="content-section__section-heading">Skills</h3>
+                {% for group in skills %}
                 <div class="content-section__content">
                     <p class="content-section__topic">
-                        <span class="content-section__topic-heading">Front end:</span>
+                        <span class="content-section__topic-heading">{{ group.heading }}: </span>
                         {% set comma = joiner() %}
-                        {% for skill in skills.frontend -%}
+                        {% for skill in group.list -%}
                             {{ comma() }} {{ skill }}
                         {%- endfor %}
                     </p>
                 </div>
-                <div class="content-section__content">
-                    <p class="content-section__topic">
-                        <span class="content-section__topic-heading">Back end:</span>
-                        {% set comma = joiner() %}
-                        {% for skill in skills.backend -%}
-                            {{ comma() }} {{ skill }}
-                        {%- endfor %}
-                    </p>
-                </div>
+                {%- endfor %}
             </section>
             <section id="experience" class="content-section">
                 <h3 class="content-section__section-heading">Experience</h3>
@@ -295,12 +299,25 @@ extra:
                         <h5 class="content-section__sub-title">
                         {% if exp.start_date -%}
                             {{ exp.start_date }} - {{ exp.end_date if exp.end_date else "present" }}
+                        {% elif exp.date -%}
+                            {{ exp.date }}
                         {%- endif %}
                         </h5>
                     </div>
                     <ul>
                         {% for task in exp.tasks -%}
+                        {% if task.project %}
+                        <li>
+                            {% set comma = joiner() %}
+                            <span>{{ task.project }}</span>
+                            <span>&bull; {% for tech in task.tech -%}{{ comma() }} {{ tech }}{%- endfor %}</span>
+                            {% if task.short_description %}
+                            <br><span class="content-section__sub-title">{{ task.short_description }}</span>
+                            {% endif %}
+                            <br><span>{{task.long_description}}</span></li>
+                        {% else%}
                         <li>{{ task }}</li>
+                        {% endif %}
                         {%- endfor %}
                     </ul>
                 </div>
